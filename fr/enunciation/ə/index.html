@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Phonetic Practice</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CHXHM9CZKM"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-CHXHM9CZKM");
+    </script>
+
+    <!-- Favicons -->
+    <link href="/img/favicon.png" rel="icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../assets/css/pron.css" />
+    <style>
+      .sub {
+        font-weight: bold;
+        background-color: #e9ffff;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Left Sidebar Navigation -->
+    <div id="navbar"></div>
+    <script type="module" src="../../../assets/js/nav-enun.js"></script>
+
+    <!-- Main Content Area -->
+
+    <div class="main-content">
+      <div class="top-header">
+        <h1>French /ə/</h1>
+      </div>
+
+      <div class="content-container">
+        <!-- Spacer preserved after removing the audio player -->
+        <div class="mb-2" aria-hidden="true"></div>
+
+        <!-- Main Text Content -->
+
+        <p style="color: brown; font-size: 1.1em; margin-top: 0">
+          <i>Click on the words to hear the pronunciation.</i>
+        </p>
+
+        <!-- Glossary Section -->
+        <div class="content-box" id="glossary">
+          <div class="glossary-title"><i class="bi bi-book"></i> &nbsp;e</div>
+
+          <table class="glossary-table">
+            <thead>
+              <tr style="color: #3498db; font-weight: 600">
+                <th style="padding: 12px 8px">FRENCH</th>
+                <th style="padding: 12px 8px">ENGLISH</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td onclick="playAudio('audio0')">appartement /apaʀtəmɑ̃/</td>
+                <td>apartment</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio1')">appeler /ap(ə)le/</td>
+                <td>to call</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio2')">besoin /bəzwɛ̃/</td>
+                <td>need</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio3')">bienvenu /bjɛ̃v(ə)ny/</td>
+                <td>welcome</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio4')">ce /sə/</td>
+                <td>this / that</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio5')">cheval /ʃ(ə)val/</td>
+                <td>horse</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio6')">demain /d(ə)mɛ̃/</td>
+                <td>tomorrow</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio7')">demander /d(ə)mɑ̃de/</td>
+                <td>to ask</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio8')">demi /d(ə)mi/</td>
+                <td>half</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio9')">devant /d(ə)vɑ̃/</td>
+                <td>in front</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio10')">fenêtre /f(ə)nɛtʀ/</td>
+                <td>window</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio11')">je /ʒə/</td>
+                <td>I</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio12')">le /lə/</td>
+                <td>the</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio13')">menacer /mənase/</td>
+                <td>to threaten</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio14')">ne /nə/</td>
+                <td>not</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio15')">petit /p(ə)ti/</td>
+                <td>small</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio16')">premier /pʀəmje/</td>
+                <td>first</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio17')">recevoir /ʀ(ə)səvwaʀ/</td>
+                <td>to receive / get</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio18')">refaire /ʀ(ə)fɛʀ/</td>
+                <td>to do again</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio19')">regard /ʀ(ə)ɡaʀ/</td>
+                <td>look</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio20')">remettre /ʀ(ə)mɛtʀ/</td>
+                <td>to put back on</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio21')">renaître /ʀ(ə)nɛtʀ/</td>
+                <td>to be revived</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio22')">retard /ʀ(ə)taʀ/</td>
+                <td>delay</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio23')">retenir /ʀ(ə)t(ə)niʀ/</td>
+                <td>to hold (back)</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio24')">revenir /ʀ(ə)v(ə)niʀ/</td>
+                <td>to come back</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio25')">seconde /s(ə)ɡɔ̃d/</td>
+                <td>second</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio26')">serait /s(ə)ʀɛ/</td>
+                <td>will be</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio27')">tenir /t(ə)niʀ/</td>
+                <td>to hold</td>
+              </tr>
+              <tr>
+                <td onclick="playAudio('audio28')">venir /v(ə)niʀ/</td>
+                <td>to come</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden Audio Elements -->
+    <audio id="audio1" src="/media/ə/01-appartement.m4a"></audio>
+    <audio id="audio2" src="/media/ə/02-appeler.m4a"></audio>
+    <audio id="audio3" src="/media/ə/03-besoin.m4a"></audio>
+    <audio id="audio4" src="/media/ə/04-bienvenu.m4a"></audio>
+    <audio id="audio5" src="/media/ə/05-ce.m4a"></audio>
+    <audio id="audio6" src="/media/ə/06-cheval.m4a"></audio>
+    <audio id="audio7" src="/media/ə/07-demain.m4a"></audio>
+    <audio id="audio8" src="/media/ə/08-demander.m4a"></audio>
+    <audio id="audio9" src="/media/ə/09-demi.m4a"></audio>
+    <audio id="audio10" src="/media/ə/10-devant.m4a"></audio>
+    <audio id="audio11" src="/media/ə/11-fenêtre.m4a"></audio>
+    <audio id="audio12" src="/media/ə/12-je.m4a"></audio>
+    <audio id="audio13" src="/media/ə/13-le.m4a"></audio>
+    <audio id="audio14" src="/media/ə/14-menacer.m4a"></audio>
+    <audio id="audio15" src="/media/ə/15-ne.m4a"></audio>
+    <audio id="audio16" src="/media/ə/16-petit.m4a"></audio>
+    <audio id="audio17" src="/media/ə/17-premier.m4a"></audio>
+    <audio id="audio18" src="/media/ə/18-recevoir.m4a"></audio>
+    <audio id="audio19" src="/media/ə/19-refaire.m4a"></audio>
+    <audio id="audio20" src="/media/ə/20-regard.m4a"></audio>
+    <audio id="audio21" src="/media/ə/21-remettre.m4a"></audio>
+    <audio id="audio22" src="/media/ə/22-renaître.m4a"></audio>
+    <audio id="audio23" src="/media/ə/23-retard.m4a"></audio>
+    <audio id="audio24" src="/media/ə/24-retenir.m4a"></audio>
+    <audio id="audio25" src="/media/ə/25-revenir.m4a"></audio>
+    <audio id="audio26" src="/media/ə/26-seconde.m4a"></audio>
+    <audio id="audio27" src="/media/ə/27-serait.m4a"></audio>
+    <audio id="audio28" src="/media/ə/28-tenir.m4a"></audio>
+    <audio id="audio29" src="/media/ə/29-venir.m4a"></audio>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="module" src="../../../assets/js/phonetic.js"></script>
+  </body>
+</html>

@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Reading Practice</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CHXHM9CZKM"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-CHXHM9CZKM");
+    </script>
+
+    <!-- Favicons -->
+    <link href="/img/favicon.png" rel="icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/read.css" />
+    <style>
+      img {
+        width: 250px !important;
+        height: auto;
+      }
+      b {
+        color: rgb(181, 1, 181);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Left Sidebar Navigation -->
+    <div id="navbar"></div>
+    <script type="module" src="../../assets/js/nav-read.js"></script>
+
+    <!-- Main Content Area -->
+
+    <div class="main-content">
+      <!-- Audio Player Button -->
+      <div class="mb-4">
+        <button id="openAudio" class="btn-audio">
+          <i class="bi bi-play-circle"></i> Open Audio Player
+        </button>
+      </div>
+
+      <!-- Draggable Audio Player Window -->
+      <div id="audioPlayerWindow">
+        <div id="audioPlayerHeader">
+          <span><i class="bi bi-music-note-beamed"></i> Audio Player</span>
+          <button id="closeAudio">&times;</button>
+        </div>
+        <div id="audioPlayerControls">
+          <button id="playBtn" title="Play">&#9658;</button>
+          <button id="pauseBtn" title="Pause">&#10074;&#10074;</button>
+          <button id="stopBtn" title="Stop">&#9632;</button>
+        </div>
+        <div id="progressContainer">
+          <input
+            type="range"
+            id="progressBar"
+            min="0"
+            max="100"
+            step="0.1"
+            value="0"
+            class="form-range"
+          />
+        </div>
+        <audio id="audioElement" src="/media/read/giethoorn.m4a"></audio>
+      </div>
+      <!-- End Audio Player -->
+      <div class="top-header">
+        <h1>Giethoorn</h1>
+      </div>
+      <h5>Un village aux Pays-Bas</h5>
+      <div class="french-text" data-aos="fade-up">
+        <h5>🗼 French</h5>
+        <p>
+          <img
+            class="french-text-img"
+            src="/img/Giethoorn.png"
+            alt=""
+            style="width: 400px !important"
+          />
+          Giethoorn, ce
+          <span data-bs-toggle="tooltip" title="/vilaʒ/">village</span>
+          <span data-bs-toggle="tooltip" title="/fe(e)ʀik/">féerique</span> des
+          <span data-bs-toggle="tooltip" title="/peiba/">Pays-Bas</span>, semble
+          sorti d’un <span data-bs-toggle="tooltip" title="/kɔ̃t/">conte</span>.
+          <span data-bs-toggle="tooltip" title="/fɔ̃de/">Fondé</span> au
+          <span data-bs-toggle="tooltip" title="treizième /tʀɛzjɛm/"
+            >XIIIᵉ</span
+          >
+          <span data-bs-toggle="tooltip" title="/sjɛkl/">siècle</span> par des
+          <span data-bs-toggle="tooltip" title="/kɔlɔ̃/">colons</span> qui y
+          <span data-bs-toggle="tooltip" title="/tʀuvɛ/">trouvèrent</span> de
+          <span data-bs-toggle="tooltip" title="/nɔ̃brøz/">nombreuses</span>
+          <span data-bs-toggle="tooltip" title="/kɔʀn/">cornes</span> de
+          <span data-bs-toggle="tooltip" title="/ʃɛvʀ/">chèvres</span> — d’où
+          son nom — il s’est développé d’abord autour de la terre et des
+          <span data-bs-toggle="tooltip" title="/maʀekaʒ/">marécages</span>.
+          Plus tard, vers 1600, l’<span
+            data-bs-toggle="tooltip"
+            title="/ɛkstʀaksjɔ̃/"
+            >extraction</span
+          >
+          de <span data-bs-toggle="tooltip" title="/tuʀb/">tourbe</span>
+          <span data-bs-toggle="tooltip" title="/dəvɛ̃/">devint</span>
+          une
+          <span data-bs-toggle="tooltip" title="/ɛ̃dystʀi/">industrie</span>
+          <span data-bs-toggle="tooltip" title="/flɔʀisɑ̃/">florissante</span>.
+          En <span data-bs-toggle="tooltip" title="/kʀøzɑ̃/">creusant</span> la
+          tourbe, les habitants
+          <span data-bs-toggle="tooltip" title="/lesɛ/">laissèrent</span>
+          <span data-bs-toggle="tooltip" title="/dɛʀjɛʀ/">derrière</span> eux
+          des <span data-bs-toggle="tooltip" title="/kavite/">cavités</span> que
+          l’eau <span data-bs-toggle="tooltip" title="/ɑ̃vai/">envahit</span> peu
+          à peu, <span data-bs-toggle="tooltip" title="/kʀeɑ̃/">créant</span> les
+          lacs et les
+          <span data-bs-toggle="tooltip" title="/kano/">canaux</span>
+          <span data-bs-toggle="tooltip" title="/pezibl/">paisibles</span> qui
+          <span data-bs-toggle="tooltip" title="/dɔn/">donnent</span>
+          aujourd’hui à Giethoorn son
+          <span data-bs-toggle="tooltip" title="/ʃaʀm.ynik/ unique charm"
+            >charme unique</span
+          >. <br /><br />
+          Les
+          <span data-bs-toggle="tooltip" title="/vilaʒwa/">villageois</span> ont
+          appris à vivre en
+          <span data-bs-toggle="tooltip" title="/aʀmɔni/">harmonie</span> avec
+          cette eau nouvelle : ils se
+          <span data-bs-toggle="tooltip" title="/deplasɛ/">déplaçaient</span> en
+          <span data-bs-toggle="tooltip" title="/baʀk/">barques</span>
+          <span data-bs-toggle="tooltip" title="/silɑ̃sjøz/">silencieuses</span>,
+          <span data-bs-toggle="tooltip" title="/ʀɑ̃dɛ.vizit/"
+            >rendaient visite</span
+          >
+          aux voisins,
+          <span data-bs-toggle="tooltip" title="/tʀɑ̃spɔʀtɛ/"
+            >transportaient</span
+          >
+          le <span data-bs-toggle="tooltip" title="/fwɛ̃/">foin</span> et
+          <span data-bs-toggle="tooltip" title="/kyltivɛ/">cultivaient</span> un
+          <span data-bs-toggle="tooltip" title="/ɛspʀi/">esprit</span> de
+          <span data-bs-toggle="tooltip" title="/sɛ̃plisite/">simplicité</span>
+          <span data-bs-toggle="tooltip" title="/ʒwajøz/">joyeuse</span>.
+          Giethoorn garde encore cette
+          <span data-bs-toggle="tooltip" title="/ɑm.tɑ̃dʀ/ tender soul"
+            >âme tendre</span
+          >
+          : maisons aux
+          <span data-bs-toggle="tooltip" title="/twa.də.ʃom/ thatched roofs"
+            >toits de chaume</span
+          >, jardins
+          <span data-bs-toggle="tooltip" title="/flœʀi/">fleuris</span>, ponts
+          de bois et barques qui
+          <span data-bs-toggle="tooltip" title="/glis/">glissent</span> comme
+          des <span data-bs-toggle="tooltip" title="/myʀmyʀ/">murmures</span>.
+          Ce village prouve qu’on peut toucher le cœur sans routes : il suffit
+          de beauté, de
+          <span data-bs-toggle="tooltip" title="/dusœʀ/">douceur</span>… et d’un
+          peu d’eau qui raconte son histoire.
+        </p>
+      </div>
+      <br />
+
+      <div class="english-text" data-aos="fade-up">
+        <h5><i class="bi bi-translate"></i> &nbsp;English</h5>
+        <p>
+          Giethoorn, this enchanting village in the Netherlands, seems straight
+          out of a fairy tale. Founded in the 13th century by settlers who found
+          numerous goat horns there—hence its name—it initially developed around
+          the land and marshes. Later, around 1600, peat extraction became a
+          thriving industry. As they dug the peat, the inhabitants left behind
+          cavities that gradually filled with water, creating the tranquil lakes
+          and canals that give Giethoorn its unique charm today.<br /><br />The
+          villagers learned to live in harmony with this new water: they
+          traveled in silent boats, visited their neighbors, transported hay,
+          and cultivated a spirit of joyful simplicity. Giethoorn still retains
+          this gentle soul: thatched-roof houses, flower-filled gardens, wooden
+          bridges, and boats that glide by like whispers. This village proves
+          that you can touch the heart without roads: all you need is beauty,
+          gentleness… and a little water that tells its story.
+        </p>
+      </div>
+      <br />
+      <!-- Glossary Section -->
+      <div class="glossary-section" data-aos="fade-up">
+        <h5><i class="bi bi-journal-bookmark"></i> &nbsp;GLOSSARY</h5>
+        <br />
+
+        <table class="glossary-table">
+          <tbody>
+            <tr>
+              <td class="glossary-word">village</td>
+              <td style="width: 40px"></td>
+              <td>village</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">féerique</td>
+              <td></td>
+              <td>fairy-like / magical</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">conte</td>
+              <td></td>
+              <td>tale</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                fonder <span class="pho"> /fɔ̃de/</span>
+              </td>
+              <td></td>
+              <td>to found</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">treizième</td>
+              <td></td>
+              <td>thirteenth</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">colon</td>
+              <td></td>
+              <td>settler</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">corne</td>
+              <td></td>
+              <td>horn</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">marécage</td>
+              <td></td>
+              <td>swamp / marshland</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">tourbe</td>
+              <td></td>
+              <td>peat</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                devenir <span class="pho"> /dəv(ə)niʀ/</span>
+              </td>
+              <td></td>
+              <td>to become</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">florissante</td>
+              <td></td>
+              <td>flourishing</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                creusers <span class="pho"> /kʀøze/</span>
+              </td>
+              <td></td>
+              <td>to dig</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                laisser <span class="pho"> /lese/</span>
+              </td>
+              <td></td>
+              <td>to leave</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">cavité</td>
+              <td></td>
+              <td>cavity / hollow space</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                enhavir <span class="pho"> /ɑ̃vaiʀ/</span>
+              </td>
+              <td></td>
+              <td>to invade</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                créer <span class="pho"> /kʀee/</span>
+              </td>
+              <td></td>
+              <td>to create</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                canal <span class="pho"> /kanal/</span>
+              </td>
+              <td></td>
+              <td>canal / waterway</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">paisible</td>
+              <td></td>
+              <td>peaceful / calm</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">villageois</td>
+              <td></td>
+              <td>villager</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">déplacer <span> /deplase/</span></td>
+              <td></td>
+              <td>to move</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">barque</td>
+              <td></td>
+              <td>small boat</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">silencieux <span> /silɑ̃sjø/</span></td>
+              <td></td>
+              <td>silent / quiet</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                rendre visite à quelqu’un <span> /ʀɑ̃dʀ.vizit/</span>
+              </td>
+              <td></td>
+              <td>to visit someone</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">visiter à Paris</td>
+              <td></td>
+              <td>
+                to visit Paris
+                <span class="pho"> (to visit places, use "visiter")</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="glossary-word">foin</td>
+              <td></td>
+              <td>hay</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">cultiver <span> /kyltive/</span></td>
+              <td></td>
+              <td>to cultivate</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">esprit</td>
+              <td></td>
+              <td>mind / spirit</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">simplicité</td>
+              <td></td>
+              <td>simplicity</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">garder <span> /ɡaʀde/</span></td>
+              <td></td>
+              <td>to keep</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">fleuri</td>
+              <td></td>
+              <td>full of flowers</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">pont de bois</td>
+              <td></td>
+              <td>wooden bridge</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">glisser <span> /glise/</span></td>
+              <td></td>
+              <td>to slide/slip</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">murmure</td>
+              <td></td>
+              <td>murmur / soft whisper</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">douceur</td>
+              <td></td>
+              <td>gentleness / sweetness</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <button
+      id="scrollTopBtn"
+      class="btn btn-primary scroll-top-btn"
+      type="button"
+      aria-label="Scroll to top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!--     <div class="bottom-nav">
+      <a class="btn btn-outline-primary" href="index.html">Page One</a>
+      <a class="btn btn-primary" href="dimanche.html">Page Two</a>
+    </div>
+    <p></p>
+    <p></p> -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="module" src="../../assets/js/read.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </body>
+</html>

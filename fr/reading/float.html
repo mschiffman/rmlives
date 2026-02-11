@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Reading Practice</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CHXHM9CZKM"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-CHXHM9CZKM");
+    </script>
+
+    <!-- Favicons -->
+    <link href="/img/favicon.png" rel="icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/read.css" />
+    <style>
+      img {
+        width: 250px !important;
+        height: auto;
+      }
+      b {
+        color: rgb(181, 1, 181);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Left Sidebar Navigation -->
+    <div id="navbar"></div>
+    <script type="module" src="../../assets/js/nav-read.js"></script>
+
+    <!-- Main Content Area -->
+
+    <div class="main-content">
+      <!-- Audio Player Button -->
+      <div class="mb-4">
+        <button id="openAudio" class="btn-audio">
+          <i class="bi bi-play-circle"></i> Open Audio Player
+        </button>
+      </div>
+
+      <!-- Draggable Audio Player Window -->
+      <div id="audioPlayerWindow">
+        <div id="audioPlayerHeader">
+          <span><i class="bi bi-music-note-beamed"></i> Audio Player</span>
+          <button id="closeAudio">&times;</button>
+        </div>
+        <div id="audioPlayerControls">
+          <button id="playBtn" title="Play">&#9658;</button>
+          <button id="pauseBtn" title="Pause">&#10074;&#10074;</button>
+          <button id="stopBtn" title="Stop">&#9632;</button>
+        </div>
+        <div id="progressContainer">
+          <input
+            type="range"
+            id="progressBar"
+            min="0"
+            max="100"
+            step="0.1"
+            value="0"
+            class="form-range"
+          />
+        </div>
+        <audio id="audioElement" src="/media/read/float.m4a"></audio>
+      </div>
+      <!-- End Audio Player -->
+      <div class="top-header">
+        <h1>Les marchés flottants thaïlandais</h1>
+      </div>
+      <h5>Comment tout a commencé</h5>
+      <div class="french-text" data-aos="fade-up">
+        <h5>🗼 French</h5>
+        <p>
+          <img class="french-text-img" src="/img/float.svg" alt="" />
+          Les <span data-bs-toggle="tooltip" title="/marché/">marchés</span>
+          <span data-bs-toggle="tooltip" title="/flɔtɑ̃/">flottants</span>
+          <span data-bs-toggle="tooltip" title="/tajlɑ̃dε/">thaïlandais</span>
+          prennent leur
+          <span data-bs-toggle="tooltip" title="/ɔriʒin/">origine</span> à
+          l’<span data-bs-toggle="tooltip" title="/epɔk/">époque</span> du
+          <span data-bs-toggle="tooltip" title="/rwajom/">royaume</span>
+          d’Ayutthaya (1350-1767), où les
+          <span data-bs-toggle="tooltip" title="/vwa/">voies</span> d’eau —
+          <span data-bs-toggle="tooltip" title="/kano/">canaux</span> et
+          <span data-bs-toggle="tooltip" title="/rivjεr/">rivières</span> —
+          <span data-bs-toggle="tooltip" title="/kɔ̃stitɥε/">constituaient</span>
+          l’essentiel du
+          <span data-bs-toggle="tooltip" title="/trɑ̃spɔr/">transport</span> et
+          du <span data-bs-toggle="tooltip" title="/kɔmɛʀs/">commerce</span>.
+          Les habitants
+          <span data-bs-toggle="tooltip" title="/navigε/">naviguaient</span>
+          sur les khlongs avec des
+          <span data-bs-toggle="tooltip" title="/ɑ̃baʀkasjɔ̃/">embarcations</span>
+          <span data-bs-toggle="tooltip" title="/ʃarʒe/">chargées</span> de
+          produits
+          <span data-bs-toggle="tooltip" title="/agrikɔl/">agricoles</span>,
+          d’<span data-bs-toggle="tooltip" title="/artizana/">artisanat</span>
+          ou de <span data-bs-toggle="tooltip" title="/dɑ̃re/">denrées</span>,
+          <span data-bs-toggle="tooltip" title="/siʀkylɑ̃/">circulant</span>
+          entre
+          <span data-bs-toggle="tooltip" title="/vilaʒ/">villages</span> et
+          marchés. Avec le
+          <span data-bs-toggle="tooltip" title="/devlɔpmɑ̃/">développement</span>
+          <span data-bs-toggle="tooltip" title="/yrbε̃/">urbain</span> de Bangkok
+          et la
+          <span data-bs-toggle="tooltip" title="/kɔ̃stryksjɔ̃/"
+            >construction</span
+          >
+          de nombreux canaux sous les
+          <span data-bs-toggle="tooltip" title="/rεɲ/">règnes</span> des
+          <span data-bs-toggle="tooltip" title="/rwa/">rois</span>
+          Rama
+          <span data-bs-toggle="tooltip" title="Quatrième /katʀiɛm/">IV</span>
+          et Rama
+          <span data-bs-toggle="tooltip" title="Cinquième /sɛ̃kjɛm/">V</span>,
+          ces marchés
+          <span data-bs-toggle="tooltip" title="/prɔsperɛ/">prospérèrent</span>
+          et
+          <span data-bs-toggle="tooltip" title="/d(ə)vɛ̃ʀ/">devinrent</span>
+          <span data-bs-toggle="tooltip" title="/sɛ̃bɔlik/">symboliques</span> de
+          la vie
+          <span data-bs-toggle="tooltip" title="/kɔmynotɛʀ/">communautaire</span
+          >. À partir du
+          <span data-bs-toggle="tooltip" title="vingtième /vε̃tjεm/">XXᵉ</span>
+          <span data-bs-toggle="tooltip" title="/sjεkl/">siècle</span>, l’<span
+            data-bs-toggle="tooltip"
+            title="/esɔʀ/"
+            >essor</span
+          >
+          des routes et des transports
+          <span data-bs-toggle="tooltip" title="/teʀɛstʀ/">terrestres</span>
+          <span data-bs-toggle="tooltip" title="/ɑ̃tʀɛna/">entraîna</span> un
+          fort <span data-bs-toggle="tooltip" title="/deklɛ̃/">déclin</span> de
+          ces marchés
+          <span data-bs-toggle="tooltip" title="/tʀadisjɔnɛl/"
+            >traditionnels</span
+          >. Dans les années
+          <span
+            data-bs-toggle="tooltip"
+            title="mille neuf cent soixante-dix /mil nœf sɑ̃ swasɑ̃t dis/"
+            >1970</span
+          >-<span
+            data-bs-toggle="tooltip"
+            title="mille neuf cent quatre-vingts /mil nœf sɑ̃ katʀəvɛ̃/"
+            >1980</span
+          >, la Tourism Authority of Thailand
+          <span data-bs-toggle="tooltip" title="/ʀəlɑ̃sa/">relança</span>
+          certains marchés flottants, comme le Damnoen Saduak Floating Market,
+          en les
+          <span data-bs-toggle="tooltip" title="/tʀɑ̃sfɔʀmɑ̃/">transformant</span>
+          en
+          <span data-bs-toggle="tooltip" title="/atʀaksjɔ̃/">attractions</span>
+          <span data-bs-toggle="tooltip" title="/tuʀistik/">touristiques</span>.
+          Aujourd’hui, ces marchés
+          <span data-bs-toggle="tooltip" title="/kɔ̃stityɑ̃/">constituent</span>
+          un <span data-bs-toggle="tooltip" title="/melɑ̃ʒ/">mélange</span> de
+          tradition, de
+          <span data-bs-toggle="tooltip" title="/spɛktakl/">spectacle</span> et
+          de <span data-bs-toggle="tooltip" title="/tuʀism/">tourisme</span>,
+          tout en
+          <span data-bs-toggle="tooltip" title="/ʀɛstɑ̃/">restant</span> un
+          <span data-bs-toggle="tooltip" title="/eʀitaʒ/">héritage</span>
+          <span data-bs-toggle="tooltip" title="/vivɑ̃/">vivant</span> de la
+          <span data-bs-toggle="tooltip" title="/ʀ(ə)lasjɔ̃/">relation</span>
+          entre les Thaïlandais et leurs voies d’eau.
+        </p>
+      </div>
+      <br />
+
+      <div class="english-text" data-aos="fade-up">
+        <h5><i class="bi bi-translate"></i> &nbsp;English</h5>
+        <p>
+          Thai floating markets trace their origin to the era of the Ayutthaya
+          Kingdom (1350–1767), when waterways — canals and rivers — formed the
+          backbone of transport and trade. Residents navigated the khlongs in
+          boats loaded with agricultural goods, handicrafts, or foodstuffs,
+          traveling between villages and markets. With the urban development of
+          Bangkok and the construction of numerous canals under Kings Rama IV
+          and Rama V, these markets thrived and became symbolic of community
+          life. From the 20th century onward, the rise of roads and land
+          transport led to a sharp decline in these traditional markets. In the
+          1970s and 1980s, the Tourism Authority of Thailand revived several
+          floating markets — such as the Damnoen Saduak Floating Market — by
+          transforming them into tourist attractions. Today, these markets
+          represent a blend of tradition, spectacle, and tourism, while
+          remaining a living heritage of the close relationship between the Thai
+          people and their waterways.
+        </p>
+      </div>
+      <br />
+      <!-- Glossary Section -->
+      <div class="glossary-section" data-aos="fade-up">
+        <h5><i class="bi bi-journal-bookmark"></i> &nbsp;GLOSSARY</h5>
+        <br />
+
+        <table class="glossary-table">
+          <tbody>
+            <tr>
+              <td class="glossary-word">flottant</td>
+              <td style="width: 40px"></td>
+              <td>floating</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">époque</td>
+              <td style="width: 40px"></td>
+              <td>time / period</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">royaume</td>
+              <td style="width: 40px"></td>
+              <td>kingdom</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">les voies d’eau</td>
+              <td style="width: 40px"></td>
+              <td>waterways</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">canaux et rivières</td>
+              <td style="width: 40px"></td>
+              <td>canals and rivers</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                constituer <span class="pho"> /kɔ̃stitɥe/</span>
+              </td>
+              <td style="width: 40px"></td>
+              <td>to form/represent</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                naviguer <sup>f</sup> <span class="pho"> /navige/</span>
+              </td>
+              <td style="width: 40px"></td>
+              <td>to sail/navigate</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">klong</td>
+              <td style="width: 40px"></td>
+              <td>canal or waterway</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">embarcations</td>
+              <td style="width: 40px"></td>
+              <td>boat or craft</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">chargée</td>
+              <td style="width: 40px"></td>
+              <td>full / busy</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">agricole</td>
+              <td style="width: 40px"></td>
+              <td>agricultural / farming</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">artisanat</td>
+              <td style="width: 40px"></td>
+              <td>craft</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">denrées</td>
+              <td style="width: 40px"></td>
+              <td>food / foodstuff / commodity</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">circuler</td>
+              <td style="width: 40px"></td>
+              <td>to circulate/flow</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">le développement urbain</td>
+              <td style="width: 40px"></td>
+              <td>the urban development</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">règnes</td>
+              <td style="width: 40px"></td>
+              <td>reign / rule</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">rois</td>
+              <td style="width: 40px"></td>
+              <td>king</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                prospérer <span class="pho"> /prɔspere/</span>
+              </td>
+              <td style="width: 40px"></td>
+              <td>to thrive</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                devenir <span class="pho"> /dəvnir/</span>
+              </td>
+              <td style="width: 40px"></td>
+              <td>to become</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">symbolique</td>
+              <td style="width: 40px"></td>
+              <td>symbolic</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">communautaire</td>
+              <td style="width: 40px"></td>
+              <td>community</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">siècle</td>
+              <td style="width: 40px"></td>
+              <td>century</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">essor</td>
+              <td style="width: 40px"></td>
+              <td>rapid expansion</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">terrestre</td>
+              <td style="width: 40px"></td>
+              <td>land</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                entraîner <span class="pho"> /ɑ̃tʀene/</span>
+              </td>
+              <td style="width: 40px"></td>
+              <td>to lead / to train</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">fort /fɔʀ/</td>
+              <td style="width: 40px"></td>
+              <td>strong</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">déclin</td>
+              <td style="width: 40px"></td>
+              <td>decline</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">traditionnel</td>
+              <td style="width: 40px"></td>
+              <td>traditional</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">1970-1980</td>
+              <td style="width: 40px"></td>
+              <td>
+                between 1970 and 1980<br /><b>entre</b> mille neuf cent
+                soixante-dix <b>et</b> mille neuf cent quatre-vingts
+              </td>
+            </tr>
+            <tr>
+              <td class="glossary-word">1970-1980</td>
+              <td style="width: 40px"></td>
+              <td>
+                from 1970 to 1980<br /><b>de</b> mille neuf cent soixante-dix
+                <b>à</b> mille neuf cent quatre-vingts
+              </td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                relancer <span class="pho"> /ʀ(ə)lɑ̃se/</span>
+              </td>
+              <td style="width: 40px"></td>
+              <td>to restart</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                certain <span class="pho"> /sɛʀtɛ̃/</span>
+              </td>
+              <td style="width: 40px"></td>
+              <td>certain</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                transformer <span class="pho"> /tʀɑ̃sfɔʀme/</span>
+              </td>
+              <td style="width: 40px"></td>
+              <td>to transform</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">attractions touristiques</td>
+              <td style="width: 40px"></td>
+              <td>tourist attractions</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">mélange</td>
+              <td style="width: 40px"></td>
+              <td>blending</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">spectacle</td>
+              <td style="width: 40px"></td>
+              <td>show</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">tourisme</td>
+              <td style="width: 40px"></td>
+              <td>tourism</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">restant</td>
+              <td style="width: 40px"></td>
+              <td>remaining</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">vivant</td>
+              <td style="width: 40px"></td>
+              <td>living</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">relation</td>
+              <td style="width: 40px"></td>
+              <td>relationship</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <button
+      id="scrollTopBtn"
+      class="btn btn-primary scroll-top-btn"
+      type="button"
+      aria-label="Scroll to top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!--     <div class="bottom-nav">
+      <a class="btn btn-outline-primary" href="index.html">Page One</a>
+      <a class="btn btn-primary" href="dimanche.html">Page Two</a>
+    </div>
+    <p></p>
+    <p></p> -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="module" src="../../assets/js/read.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </body>
+</html>

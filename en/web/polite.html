@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#3498db" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="English App" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+    <title>Clear Everyday English - Polite vs Direct</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #f0f2f5;
+        padding: 16px;
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .header-section {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .header-section h1 {
+        font-size: 1.4rem;
+        margin: 0 0 8px 0;
+        color: #333;
+      }
+
+      .header-section p {
+        font-size: 0.95rem;
+        color: #666;
+        margin: 0;
+      }
+
+      .nav-menu {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .nav-btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        border: none;
+        border-radius: 25px;
+        background: #fff;
+        color: #333;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease;
+        font-weight: 500;
+        min-width: 100px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .nav-btn.active {
+        background: #3498db;
+        color: white;
+      }
+
+      .nav-btn:active {
+        transform: scale(0.96);
+      }
+
+      .content-area {
+        background: white;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .lesson-title {
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 0 0 10px 0;
+        color: #333;
+      }
+
+      .lesson-description {
+        text-align: center;
+        color: #666;
+        font-size: 0.9rem;
+        margin: 0 0 16px 0;
+      }
+
+      .explanation-box {
+        background: #fff8e1;
+        border-left: 4px solid #ffc107;
+        padding: 12px 16px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+      }
+
+      .explanation-box h5 {
+        margin: 0 0 8px 0;
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .explanation-box p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      .watch-btn {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 1rem;
+        background: #ff0000;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3);
+        transition: all 0.2s ease;
+      }
+
+      .watch-btn:active {
+        transform: scale(0.98);
+        background: #cc0000;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #e9ecef;
+        margin: 20px 0;
+      }
+
+      .score-display {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      .score-badge {
+        display: inline-block;
+        background: #3498db;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .instruction {
+        color: blueviolet;
+        font-weight: bold;
+        font-size: 0.95rem;
+        text-align: center;
+        margin-bottom: 16px;
+        line-height: 1.4;
+      }
+
+      .game-columns {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      @media (min-width: 500px) {
+        .game-columns {
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+        }
+      }
+
+      .game-column {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #targetColumn, #sourceColumn {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .column-header {
+        text-align: center;
+        font-weight: 600;
+        color: #495057;
+        padding: 10px;
+        background-color: #e9ecef;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+        flex-shrink: 0;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .column-header.direct {
+        background-color: #fff3cd;
+        color: #856404;
+      }
+
+      .column-header.polite {
+        background-color: #d4edda;
+        color: #155724;
+      }
+
+      .game-card {
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-bottom: 10px;
+        min-height: 56px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 500;
+        background: #f8f9fa;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        padding: 12px 16px;
+        text-align: center;
+        word-break: break-word;
+      }
+
+      .game-card:active:not(.matched) {
+        transform: scale(0.98);
+      }
+
+      .game-card.selected {
+        border: 3px solid #0d6efd;
+        box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+        background: #e7f1ff;
+      }
+
+      .game-card.matched {
+        background-color: #d1e7dd;
+        border: 2px solid #198754;
+        pointer-events: none;
+      }
+
+      .game-card.incorrect {
+        animation: shake 0.3s ease;
+        border: 3px solid #dc3545;
+        background: #fee;
+      }
+
+      @keyframes shake {
+        0%, 100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-8px);
+        }
+        75% {
+          transform: translateX(8px);
+        }
+      }
+
+      .matched-check {
+        color: #198754;
+        font-size: 1.2rem;
+        margin-left: 8px;
+      }
+
+      .reset-btn {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        padding: 14px 20px;
+        font-size: 1rem;
+        background: #198754;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+
+      .reset-btn:active {
+        transform: scale(0.98);
+        background: #157347;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-section">
+        <h1>Clear Everyday English Learning Hub</h1>
+        <p>Polite vs Direct English - Matching Exercise</p>
+      </div>
+
+      <div class="nav-menu">
+        <a class="nav-btn" href="index.html">Vocab</a>
+        <button class="nav-btn active">Polite</button>
+        <a class="nav-btn" href="introduction.html">Introduction</a>
+      </div>
+
+      <div class="content-area">
+        <h2 class="lesson-title">Polite Conversations</h2>
+
+        <p class="lesson-description">
+          Watch the video, then match the direct phrases with their polite alternatives!
+        </p>
+
+        <button class="watch-btn" onclick="openVideo()">
+          ▶ Watch Video on YouTube
+        </button>
+
+        <div class="explanation-box">
+          <h5>Key Idea</h5>
+          <p>
+            Polite English uses questions, modal verbs (could, would), and words
+            like "please" and "sorry" to show respect and make conversations smoother.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="score-display">
+          <span class="score-badge">
+            Matches: <span id="matchCount">0</span> / <span id="totalPairs">10</span>
+          </span>
+        </div>
+
+        <p class="instruction">
+          Click on the Direct expression and then click the matching Polite expression.
+        </p>
+
+        <div class="game-columns">
+          <div class="game-column">
+            <div class="column-header direct">Direct (Less Polite)</div>
+            <div id="sourceColumn"></div>
+          </div>
+          <div class="game-column">
+            <div class="column-header polite">Polite (Better)</div>
+            <div id="targetColumn"></div>
+          </div>
+        </div>
+
+        <button class="reset-btn" onclick="initGame()">Reset</button>
+      </div>
+    </div>
+
+    <script>
+      const videoID = "kdI_9vHJFt0";
+
+      const vocab = [
+        { id: 1, direct: "Help me.", polite: "Could you help me, please?" },
+        { id: 2, direct: "I want water.", polite: "Could I have some water, please?" },
+        { id: 3, direct: "Wait.", polite: "Sorry to interrupt." },
+        { id: 4, direct: "No.", polite: "Sorry, I can't right now." },
+        { id: 5, direct: "What?", polite: "Sorry, could you say that again?" },
+        { id: 6, direct: "Move.", polite: "Excuse me, could you move please?" },
+        { id: 7, direct: "Give me that.", polite: "Could I have that, please?" },
+        { id: 8, direct: "I don't understand.", polite: "I'm sorry, I don't quite understand." },
+        { id: 9, direct: "Tell me.", polite: "Could you tell me, please?" },
+        { id: 10, direct: "Don't be late.", polite: "Try to be on time, please." },
+      ];
+
+      const successSound = new Audio("https://actions.google.com/sounds/v1/foley/beeps_and_boops.ogg");
+
+      let selectedSource = null;
+      let selectedTarget = null;
+      let matchedPairs = new Set();
+      let matchCount = 0;
+
+      function playAudio(text) {
+        const filename = text.replace(/[.?]/g, "").replace(/'/g, "_");
+        const audio = new Audio("phrase/" + encodeURIComponent(filename) + ".mp3");
+        audio.play().catch(e => console.log("Audio play failed:", e));
+      }
+
+      function shuffle(array) {
+        const newArray = [...array];
+        for (let i = newArray.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+      }
+
+      function createCard(text, pairId, isSource) {
+        const card = document.createElement("div");
+        card.className = "game-card";
+        card.dataset.pairId = pairId;
+        card.innerHTML = `<span class="card-text">${text}</span>`;
+        card.addEventListener("click", () => handleCardClick(card, isSource));
+        return card;
+      }
+
+      function handleCardClick(card, isSource) {
+        if (matchedPairs.has(card.dataset.pairId)) return;
+
+        const cardText = card.querySelector(".card-text").textContent.trim();
+        playAudio(cardText);
+
+        if (isSource) {
+          if (selectedSource) selectedSource.classList.remove("selected");
+          selectedSource = card;
+          card.classList.add("selected");
+        } else {
+          if (selectedTarget) selectedTarget.classList.remove("selected");
+          selectedTarget = card;
+          card.classList.add("selected");
+        }
+
+        if (selectedSource && selectedTarget) checkMatch();
+      }
+
+      function checkMatch() {
+        const sourceId = selectedSource.dataset.pairId;
+        const targetId = selectedTarget.dataset.pairId;
+
+        if (sourceId === targetId) {
+          successSound.currentTime = 0;
+          successSound.play().catch(e => {});
+          selectedSource.classList.remove("selected");
+          selectedTarget.classList.remove("selected");
+          selectedSource.classList.add("matched");
+          selectedTarget.classList.add("matched");
+
+          selectedSource.innerHTML += '<span class="matched-check">✓</span>';
+          selectedTarget.innerHTML += '<span class="matched-check">✓</span>';
+
+          matchedPairs.add(sourceId);
+          matchCount++;
+          document.getElementById("matchCount").textContent = matchCount;
+
+          if (matchCount === vocab.length) {
+            setTimeout(() => {
+              alert("Congratulations! You matched all pairs! You now understand how to make your English more polite!");
+            }, 300);
+          }
+
+          selectedSource = null;
+          selectedTarget = null;
+        } else {
+          selectedSource.classList.add("incorrect");
+          selectedTarget.classList.add("incorrect");
+
+          setTimeout(() => {
+            selectedSource.classList.remove("selected", "incorrect");
+            selectedTarget.classList.remove("selected", "incorrect");
+            selectedSource = null;
+            selectedTarget = null;
+          }, 600);
+        }
+      }
+
+      function initGame() {
+        const sourceColumn = document.getElementById("sourceColumn");
+        const targetColumn = document.getElementById("targetColumn");
+
+        sourceColumn.innerHTML = "";
+        targetColumn.innerHTML = "";
+
+        selectedSource = null;
+        selectedTarget = null;
+        matchedPairs.clear();
+        matchCount = 0;
+        document.getElementById("matchCount").textContent = "0";
+        document.getElementById("totalPairs").textContent = vocab.length;
+
+        const shuffledTarget = shuffle(vocab);
+
+        vocab.forEach((pair) => {
+          sourceColumn.appendChild(createCard(pair.direct, pair.id, true));
+        });
+
+        shuffledTarget.forEach((pair) => {
+          targetColumn.appendChild(createCard(pair.polite, pair.id, false));
+        });
+      }
+
+      function openVideo() {
+        window.open(`https://www.youtube.com/watch?v=${videoID}`, "_blank");
+      }
+
+      initGame();
+
+      // Register service worker for offline support
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+          .then(() => console.log('Service Worker registered'))
+          .catch((err) => console.log('Service Worker registration failed:', err));
+      }
+    </script>
+  </body>
+</html>

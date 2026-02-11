@@ -1,0 +1,53 @@
+{
+  "categories": [
+    { "id": "vocabulary", "name": "Vocabulary", "icon": "book" },
+    { "id": "expressions", "name": "Expressions", "icon": "chat" },
+    { "id": "grammar", "name": "Grammar", "icon": "pencil" }
+  ],
+  "lessons": [
+    {
+      "id": "health",
+      "title": "Health Problems",
+      "description": "Common health issues and symptoms",
+      "category": "vocabulary",
+      "icon": "health",
+      "type": "vocab",
+      "videoID": "IkFgxnXuxDY",
+      "audioFolder": "audio/health1",
+      "file": "health.json"
+    },
+    {
+      "id": "landforms",
+      "title": "Landforms",
+      "description": "Geographic features and landscapes",
+      "category": "vocabulary",
+      "icon": "mountain",
+      "type": "vocab",
+      "videoID": "luehL_zNbwk",
+      "audioFolder": "audio/landforms",
+      "file": "landforms.json"
+    },
+    {
+      "id": "polite",
+      "title": "Polite Phrases",
+      "description": "Direct vs polite expressions",
+      "category": "expressions",
+      "icon": "polite",
+      "type": "phrases",
+      "videoID": "kdI_9vHJFt0",
+      "audioFolder": "audio/polite",
+      "file": "polite.json"
+    },
+    {
+      "id": "introduction",
+      "title": "Self Introduction",
+      "description": "Questions and answers for introductions",
+      "category": "expressions",
+      "icon": "person",
+      "type": "qa",
+      "videoID": "g9fHOEkShWI",
+      "audioFolder": "audio/introduction",
+      "file": "introduction.json"
+    }
+  ]
+}

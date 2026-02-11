@@ -1,0 +1,24 @@
+{
+  "id": "landforms",
+  "title": "Landforms and Landscapes",
+  "type": "vocab",
+  "vocab": [
+    { "id": 1, "en": "Mountain", "my": "တောင်", "zh": "山", "fr": "la montagne", "es": "la montaña" },
+    { "id": 2, "en": "Hill", "my": "ကုန်းမြင့်", "zh": "小山", "fr": "la colline", "es": "la colina" },
+    { "id": 3, "en": "Plateau", "my": "ကုန်းပြင်မြင့်", "zh": "高原", "fr": "le plateau", "es": "la meseta" },
+    { "id": 4, "en": "Glacier", "my": "ရေခဲမြစ်", "zh": "冰川", "fr": "le glacier", "es": "el glaciar" },
+    { "id": 5, "en": "Stream", "my": "စမ်းချောင်း", "zh": "溪流", "fr": "le ruisseau", "es": "el arroyo" },
+    { "id": 6, "en": "River", "my": "မြစ်", "zh": "河流", "fr": "la rivière", "es": "el río" },
+    { "id": 7, "en": "Waterfall", "my": "ရေတံခွန်", "zh": "瀑布", "fr": "la cascade", "es": "la cascada" },
+    { "id": 8, "en": "Sea", "my": "ပင်လယ်", "zh": "海", "fr": "la mer", "es": "el mar" },
+    { "id": 9, "en": "Ocean", "my": "သမုဒ္ဒရာ", "zh": "大洋", "fr": "l'océan", "es": "el océano" },
+    { "id": 10, "en": "Lake", "my": "အိုင်", "zh": "湖泊", "fr": "le lac", "es": "el lago" },
+    { "id": 11, "en": "Pond", "my": "ကန်", "zh": "池塘", "fr": "l'étang", "es": "el estanque" },
+    { "id": 12, "en": "Forest", "my": "သစ်တော", "zh": "森林", "fr": "la forêt", "es": "el bosque" },
+    { "id": 13, "en": "Plain", "my": "လွင်ပြင်", "zh": "平原", "fr": "la plaine", "es": "la llanura" },
+    { "id": 14, "en": "Prairie", "my": "မြက်ခင်းပြင်", "zh": "大草原", "fr": "la prairie", "es": "la pradera" },
+    { "id": 15, "en": "Island", "my": "ကျွန်း", "zh": "岛屿", "fr": "l'île", "es": "la isla" },
+    { "id": 16, "en": "Beach", "my": "ကမ်းခြေ", "zh": "海滩", "fr": "la plage", "es": "la playa" },
+    { "id": 17, "en": "Cliff", "my": "ကမ်းပါးယံ", "zh": "悬崖", "fr": "la falaise", "es": "el acantilado" }
+  ]
+}

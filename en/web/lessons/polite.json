@@ -1,0 +1,23 @@
+{
+  "id": "polite",
+  "title": "Polite Conversations",
+  "type": "phrases",
+  "explanation": {
+    "title": "Key Idea",
+    "text": "Polite English uses questions, modal verbs (could, would), and words like \"please\" and \"sorry\" to show respect and make conversations smoother."
+  },
+  "sourceLabel": "Direct (Less Polite)",
+  "targetLabel": "Polite (Better)",
+  "vocab": [
+    { "id": 1, "source": "Help me.", "target": "Could you help me, please?" },
+    { "id": 2, "source": "I want water.", "target": "Could I have some water, please?" },
+    { "id": 3, "source": "Wait.", "target": "Sorry to interrupt." },
+    { "id": 4, "source": "No.", "target": "Sorry, I can't right now." },
+    { "id": 5, "source": "What?", "target": "Sorry, could you say that again?" },
+    { "id": 6, "source": "Move.", "target": "Excuse me, could you move please?" },
+    { "id": 7, "source": "Give me that.", "target": "Could I have that, please?" },
+    { "id": 8, "source": "I don't understand.", "target": "I'm sorry, I don't quite understand." },
+    { "id": 9, "source": "Tell me.", "target": "Could you tell me, please?" },
+    { "id": 10, "source": "Don't be late.", "target": "Try to be on time, please." }
+  ]
+}

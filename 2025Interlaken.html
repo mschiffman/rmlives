@@ -1,0 +1,755 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Swiss Alps</title>
+
+    <meta name="description" content="" />
+
+    <meta name="keywords" content="" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CHXHM9CZKM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-CHXHM9CZKM");
+    </script>
+
+    <!-- Favicons -->
+
+    <link href="/img/favicon.png" rel="icon" />
+
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+
+    <link href="assets/css/main.css?v=251008" rel="stylesheet" />
+
+    <style>
+      .blog-details-page .page-title .heading {
+        padding: 40px 0;
+      }
+
+      .blog-details-page .page-title nav {
+        padding: 12px 0;
+      }
+
+      .blog-details-page .blog-details.section {
+        padding-top: 35px;
+      }
+
+      .sidebar-navigation .content-nav .dropdown > a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
+
+      .sidebar-navigation .content-nav .dropdown > ul {
+        margin: 8px 0 0;
+      }
+
+      .sidebar-navigation .content-nav .dropdown > a .toggle-dropdown {
+        transition: transform 0.3s ease;
+      }
+
+      .sidebar-navigation .content-nav .dropdown.is-open > a .toggle-dropdown {
+        transform: rotate(180deg);
+      }
+
+      .overview-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        align-items: stretch;
+      }
+
+      .overview-card {
+        background: var(--background-color);
+        border: 1px solid
+          color-mix(in srgb, var(--default-color), transparent 88%);
+        border-radius: 16px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+      }
+
+      .overview-card-media {
+        flex: 0 0 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.25rem;
+      }
+
+      .overview-card-media .overview-image {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      .overview-card-text {
+        flex: 1 1 280px;
+        padding: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .overview-card-text h2 {
+        font-size: 1.65rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+
+      .overview-card-text p {
+        margin-bottom: 0;
+      }
+
+      #overview.content-block {
+        margin-bottom: 1.75rem;
+        padding-bottom: 1rem;
+      }
+
+      #diagnostics.content-block {
+        margin-bottom: 1.5rem;
+      }
+
+      #diagnostics .text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      #diagnostics .text-content p {
+        max-width: 460px;
+      }
+
+      #swiss.content-block {
+        margin-top: 0.75rem;
+        text-align: center;
+      }
+
+      #swiss .turquoise-image,
+      #swiss-more .turquoise-image {
+        display: block;
+        margin: 1.25rem auto 1rem;
+        width: min(100%, 780px);
+        border-radius: 16px;
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+      }
+
+      #swiss p,
+      #swiss-more p {
+        max-width: 520px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      #swiss .load-more-btn {
+        margin: 1.5rem auto 0;
+        padding: 0.75rem 2.5rem;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        transition: transform 0.2s ease;
+      }
+
+      .load-more-btn.is-hidden {
+        display: none;
+      }
+
+      #swiss-more {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(32px);
+        transition:
+          opacity 0.4s ease,
+          transform 0.4s ease,
+          max-height 0.6s ease;
+      }
+
+      #swiss-more.is-visible {
+        max-height: 4000px;
+        opacity: 1;
+        transform: translateY(0);
+        margin-top: 2.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .overview-cards {
+          flex-direction: column;
+        }
+
+        .overview-card-media {
+          flex: 1 1 auto;
+          padding-bottom: 0;
+        }
+
+        .overview-card-media .overview-image {
+          max-width: 100%;
+        }
+      }
+
+      hr {
+        border: none;
+        height: 2px;
+        background-color: #081aff;
+      }
+    </style>
+  </head>
+
+  <body class="blog-details-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <h1 class="sitename">Robert & Marissa - a life well-shared</h1>
+        </a>
+
+        <nav
+          id="navmenu"
+          class="navmenu d-flex justify-content-end"
+          style="padding-right: 50px"
+        >
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+
+            <li class="dropdown">
+              <a href="#category-section"
+                ><span>Our interests</span>
+
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+
+              <ul>
+                <li><a data-href="about.html">Travel</a></li>
+
+                <li><a data-href="category.html">Gardening</a></li>
+
+                <li><a data-href="blog-details.html">Cooking</a></li>
+
+                <li class="dropdown">
+                  <a href="javascript:void(0)"
+                    ><span>Lifelong learning</span>
+
+                    <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+
+                  <ul>
+                    <li><a href="javascript:void(0)">Reading</a></li>
+
+                    <li><a href="javascript:void(0)">Coding</a></li>
+
+                    <li><a href="javascript:void(0)">Tech</a></li>
+
+                    <li><a href="javascript:void(0)">French</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="javascript:void(0)">Vector drawing</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#featured">Featured posts</a></li>
+
+            <li><a href="#latest-posts">Latest posts</a></li>
+
+            <li><a data-href="about.html">About</a></li>
+          </ul>
+
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+
+      <div class="page-title">
+        <div class="heading">
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1 class="heading-title">Swiss Alps</h1>
+
+                <p class="mb-0">
+                  Charming Swiss villages near Interlaken, Lake Thun,
+                  Lauterbrunnen, and Mürren—where turquoise lakes, cascading
+                  waterfalls, and alpine chalets create postcard views that feel
+                  timeless, serene, and utterly magical.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Page Title -->
+
+      <!-- Blog Details Section -->
+
+      <section id="blog-details" class="blog-details section">
+        <div class="container" data-aos="fade-up">
+          <div class="article-hero">
+            <div class="hero-background">
+              <img
+                src="/img/castleSpiez.jpg"
+                alt="Machine Learning in Healthcare"
+                class="hero-bg-image"
+              />
+
+              <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+              <h1>View from Spiez Castle, Switzerland</h1>
+
+              <p class="hero-excerpt">
+                Spiez Castle, a medieval gem on Lake Thun’s shore, blends
+                history, vineyards, and stunning alpine views into a timeless
+                Swiss fairytale setting.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-body">
+          <div class="sidebar-navigation" data-aos="fade-right">
+            <div class="nav-sticky">
+              <h3><i class="bi bi-list-ul"></i> Visited Places</h3>
+
+              <ul class="content-nav">
+                <li>
+                  <a href="#overview" class="nav-link active">Countries</a>
+                </li>
+
+                <li class="dropdown">
+                  <a href="javascript:void(0)"
+                    ><span>France </span
+                    ><i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+
+                  <ul>
+                    <li><a href="javascript:void(0)">Colmar</a></li>
+
+                    <li><a href="javascript:void(0)">Strasbourg</a></li>
+
+                    <li><a href="javascript:void(0)">Riquewihr</a></li>
+
+                    <li><a href="javascript:void(0)">Equisheim</a></li>
+
+                    <li><a href="javascript:void(0)">Semur en Auxios</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#swiss"
+                    ><span>Switzerland </span
+                    ><i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+
+                  <ul>
+                    <li><a href="javascript:void(0)">Bern</a></li>
+
+                    <li><a href="2025Interlaken.html">Interlaken</a></li>
+
+                    <li><a href="2025Lauterbrunnen.html">Lauterbrunnen</a></li>
+
+                    <li><a href="javascript:void(0)">Murten</a></li>
+
+                    <li><a href="javascript:void(0)">Lausanne</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#monitoring"
+                    >Germany <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+
+                  <ul>
+                    <li><a href="javascript:void(0)">Koblenz</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#challenges"
+                    >The Netherlands
+                    <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+
+                  <ul>
+                    <li><a href="javascript:void(0)">Amsterdam</a></li>
+
+                    <li><a href="javascript:void(0)">Delft </a></li>
+
+                    <li><a href="javascript:void(0)">Keukenhof </a></li>
+
+                    <li><a href="javascript:void(0)">Volendam</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#conclusion"
+                    >Belgium <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+
+                  <ul>
+                    <li><a href="javascript:void(0)">Bruges</a></li>
+
+                    <li><a href="javascript:void(0)">Ghent</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="main-content">
+            <section
+              id="diagnostics"
+              class="content-block"
+              data-aos="fade-up"
+              data-aos-once="false"
+            >
+              <h2>Our driving trip through five countries</h2>
+
+              <div class="content-with-media">
+                <div class="media-element">
+                  <a
+                    href="https://www.google.com/maps/dir/Paris+Charles+de+Gaulle+Airport,+Roissy-en-France,+France/Semur-en-Auxois,+France/Murten,+Switzerland/Interlaken,+Switzerland/Lauterbrunnen,+Switzerland/Karlsruhe,+Germany/Koblenz,+Germany/Cologne,+Germany/Amsterdam,+Netherlands/Rotterdam,+Netherlands/Bruges,+Belgium/Ghent,+Belgium/Paris,+France/@49.0804385,2.2985726,6.8z/data=!4m80!4m79!1m5!1m1!1s0x47e63e038e4ccf5b:0x42be0982f5ba62c!2m2!1d2.5507855!2d49.0078827!1m5!1m1!1s0x47edf1a2a86ddec1:0x409ce34b31441c0!2m2!1d4.33234!2d47.490238!1m5!1m1!1s0x478e12fc38054091:0x99458eceba34cd69!2m2!1d7.120184!2d46.9292211!1m5!1m1!1s0x1453996a31921a05:0x9c111af14c02be00!2m2!1d7.8632049!2d46.6863481!1m5!1m1!1s0x478fa0073b1165c7:0x5392dbb55902c31!2m2!1d7.9090981!2d46.5935058!1m5!1m1!1s0x47970648a2e07809:0xb6fc55734cb7ee7f!2m2!1d8.4036527!2d49.0068901!1m5!1m1!1s0x47be7b5776237d9d:0x422d4d510dab360!2m2!1d7.5889959!2d50.3569429!1m5!1m1!1s0x47bf259169ab2fe5:0x42760fc4a2a77f0!2m2!1d6.9602786!2d50.937531!1m5!1m1!1s0x47c63fb5949a7755:0x6600fd4cb7c0af8d!2m2!1d4.9041389!2d52.3675734!1m5!1m1!1s0x47c5b7605f54c47d:0x5229bbac955e4b85!2m2!1d4.4777326!2d51.9244201!1m5!1m1!1s0x47c350d0c11e420d:0x1aa2f35ac8834df7!2m2!1d3.2250586!2d51.2084508!1m5!1m1!1s0x47c370e1339443ad:0x40099ab2f4d5140!2m2!1d3.7303853!2d51.0499922!1m5!1m1!1s0x47e66e1f06e2b70f:0x40b82c3688c9460!2m2!1d2.3513765!2d48.8575475!3e0?entry=ttu&g_ep=EgoyMDI1MDkxNS4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="/img/route.jpg"
+                      alt="AI Diagnostic Tools"
+                      class="content-image"
+                      loading="lazy"
+                      decoding="async"
+                  /></a>
+                </div>
+
+                <div class="text-content" style="font-size: 1.1rem">
+                  <p>
+                    We leased a car in Paris and spent a month driving through
+                    France, Switzerland, Germany, the Netherlands, and Belgium.
+                    Each country offered its own unique charm, from the historic
+                    towns of Alsace in France to the stunning alpine scenery of
+                    Switzerland, the picturesque villages along the Rhine in
+                    Germany, the vibrant tulip fields in the Netherlands, and
+                    the medieval architecture of Belgium. This road trip allowed
+                    us to experience a diverse range of cultures, cuisines, and
+                    landscapes, making it an unforgettable adventure.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="swiss"
+              class="content-block"
+              data-aos="fade-up"
+              data-aos-once="false"
+            >
+              <h2>Interlaken</h2>
+
+              <hr />
+              <a
+                href="https://www.google.com/maps/place/3800+Interlaken,+Switzerland/@46.7039261,7.8124614,11.2z/data=!4m6!3m5!1s0x1453996a31921a05:0x9c111af14c02be00!8m2!3d46.6863481!4d7.8632049!16zL20vMDJoX2Y4?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+              >
+                <img
+                  src="/img/InterlakenMap.jpg"
+                  alt="View of Interlaken, Switzerland"
+                  loading="lazy"
+                  decoding="async"
+                  class="turquoise-image"
+                  data-aos="fade-up"
+                  data-aos-once="false"
+                  onload="AOS.refresh()"
+                />
+              </a>
+              <p>
+                Interlaken is on a narrow stretch of stretch of valley between
+                Lake Thun and Lake Brienz.
+              </p>
+
+              <img
+                src="/img/turquoise.jpg"
+                alt="Turquoise water of Lake Thun near Interlaken"
+                loading="lazy"
+                decoding="async"
+                class="turquoise-image"
+                data-aos="fade-up"
+                data-aos-once="false"
+                onload="AOS.refresh()"
+              />
+
+              <p>
+                Lake Thun and lake Brienz receive meltwater from surrounding
+                glaciers in the Bernese Alps. The glacial flour suspended in the
+                water scatters sunlight, giving the lake its stunning turquoise
+                color.
+              </p>
+
+              <img
+                src="/img/cow-Swiss.jpg"
+                alt="Pasture near Interlaken"
+                loading="lazy"
+                decoding="async"
+                class="turquoise-image"
+                data-aos="fade-up"
+                data-aos-once="false"
+                onload="AOS.refresh()"
+              />
+
+              <p>
+                Cows grazed peacefully as paragliders soared above—a tranquil
+                alpine scene. One afternoon the cows vanished, and over dinner
+                we wondered if our steaks had come straight from the meadow!
+                😁😜
+              </p>
+
+              <img
+                src="/img/Thun.jpg"
+                alt="Lake Thun shoreline in spring"
+                loading="lazy"
+                decoding="async"
+                class="turquoise-image"
+                data-aos="fade-up"
+                data-aos-once="false"
+                onload="AOS.refresh()"
+              />
+
+              <p>
+                Lake Thun’s waters rippled with spring winds—too choppy for
+                boats in April, but perfect for admiring its turquoise beauty
+                from the shore.
+              </p>
+
+              <div data-aos="fade-up" data-aos-once="false">
+                <img
+                  src="/img/Jungfrau.jpg"
+                  alt="Mount Jungfrau viewed from Interlaken"
+                  loading="lazy"
+                  decoding="async"
+                  class="turquoise-image"
+                  onload="AOS.refresh()"
+                />
+
+                <p>
+                  Mount Jungfrau’s prominent 13,642-foot peak disappears into
+                  the clouds, a majestic sight from Interlaken.
+                </p>
+              </div>
+            </section>
+            <div data-aos="fade-right" data-aos-once="false">
+              <h2>Travel tips</h2>
+              <hr />
+              <ul
+                style="
+                  text-align: left;
+                  max-width: 600px;
+                  margin: 0 auto;
+                  font-size: 1.1rem;
+                "
+              >
+                <li>
+                  Stay in Interlaken for easy access to nearby highlights like
+                  Lauterbrunnen and Mürren.
+                </li>
+                <li>
+                  Villages along Lake Thun offer more varied activities than
+                  those on Lake Brienz.
+                </li>
+                <li>
+                  Most restaurants open only after 7 pm, so stocking up at Coop
+                  or Migros is handy when you’re tired and hungry.
+                </li>
+                <li>
+                  Pack layers and waterproof gear to be ready for ever-changing
+                  mountain weather.
+                </li>
+              </ul>
+            </div>
+
+            <section
+              id="comments"
+              class="content-block"
+              data-aos="fade-up"
+              data-aos-once="false"
+            >
+              <h2>Leave a Comment</h2>
+              <p>
+                Share your thoughts about Interlaken below. Your email will not
+                be published.
+              </p>
+              <div id="comment-alert" class="alert d-none" role="alert"></div>
+              <form
+                action="submit_comment.php"
+                method="POST"
+                class="comment-form needs-validation"
+              >
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="comment-name" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="comment-name"
+                      name="name"
+                      placeholder="Your name"
+                      required
+                      maxlength="100"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="comment-email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="comment-email"
+                      name="email"
+                      placeholder="name@example.com"
+                      required
+                      maxlength="150"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="comment-message" class="form-label"
+                      >Comment</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="comment-message"
+                      name="comment"
+                      rows="5"
+                      placeholder="What did you think?"
+                      required
+                      maxlength="1000"
+                    ></textarea>
+                  </div>
+                </div>
+                <input type="hidden" name="page_slug" value="2025Interlaken" />
+                <div class="mt-3">
+                  <button type="submit" class="btn btn-primary">
+                    Post Comment
+                  </button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/vendor/php-email-form/validate.js"></script>
+
+    <script src="/vendor/aos/aos.js"></script>
+
+    <script src="/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script src="/vendor/purecounter/purecounter_vanilla.js"></script>
+
+    <script type="module" src="assets/js/sidebar-dropdowns.js"></script>
+
+    <!-- Main JS File -->
+
+    <script type="module" src="assets/js/main.js?v=251008"></script>
+
+    <script>
+      (function () {
+        var alertEl = document.getElementById("comment-alert");
+        if (!alertEl) {
+          return;
+        }
+        var params = new URLSearchParams(window.location.search);
+        var status = params.get("comment_status");
+        if (!status) {
+          return;
+        }
+        var message = "";
+        var styleClass = "alert-info";
+        switch (status) {
+          case "success":
+            message =
+              "Thanks for sharing your travel tip! Your comment is waiting for moderation.";
+            styleClass = "alert-success";
+            break;
+          case "invalid":
+            message = "Please double-check the form fields and try again.";
+            styleClass = "alert-warning";
+            break;
+          case "error":
+            message = "We could not save your comment. Please try again later.";
+            styleClass = "alert-danger";
+            break;
+          default:
+            return;
+        }
+        alertEl.classList.remove("d-none");
+        alertEl.classList.add(styleClass);
+        alertEl.textContent = message;
+      })();
+    </script>
+  </body>
+</html>

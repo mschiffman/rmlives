@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Reading Practice</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CHXHM9CZKM"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-CHXHM9CZKM");
+    </script>
+
+    <!-- Favicons -->
+    <link href="/img/favicon.png" rel="icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/read.css" />
+    <style>
+      img {
+        width: 400px !important;
+        height: auto;
+      }
+      b {
+        color: rgb(181, 1, 181);
+      }
+      .word-definition-popover {
+        max-width: 350px;
+      }
+
+      .popover-content-custom {
+        font-size: 0.9rem;
+      }
+
+      .word-info:hover {
+        color: #0d6efd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Left Sidebar Navigation -->
+    <div id="navbar"></div>
+    <script type="module" src="../../assets/js/nav-read.js"></script>
+
+    <!-- Main Content Area -->
+
+    <div class="main-content">
+      <!-- Audio Player Button -->
+      <div class="mb-4">
+        <button id="openAudio" class="btn-audio">
+          <i class="bi bi-play-circle"></i> Open Audio Player
+        </button>
+      </div>
+
+      <!-- Draggable Audio Player Window -->
+      <div id="audioPlayerWindow">
+        <div id="audioPlayerHeader">
+          <span><i class="bi bi-music-note-beamed"></i> Audio Player</span>
+          <button id="closeAudio">&times;</button>
+        </div>
+        <div id="audioPlayerControls">
+          <button id="playBtn" title="Play">&#9658;</button>
+          <button id="pauseBtn" title="Pause">&#10074;&#10074;</button>
+          <button id="stopBtn" title="Stop">&#9632;</button>
+        </div>
+        <div id="progressContainer">
+          <input
+            type="range"
+            id="progressBar"
+            min="0"
+            max="100"
+            step="0.1"
+            value="0"
+            class="form-range"
+          />
+        </div>
+        <audio id="audioElement" src="/media/read/tree.m4a"></audio>
+      </div>
+      <!-- End Audio Player -->
+      <div class="top-header">
+        <h1>Les arbres</h1>
+      </div>
+      <h5>Leur anatomie</h5>
+      <div class="french-text" data-aos="fade-up">
+        <h5>🗼 French</h5>
+        <p>
+          <img class="french-text-img" src="/img/tree.png" alt="" />
+          <!-- Text with tooltips -->
+          Les arbres sont de
+          <span data-bs-toggle="tooltip" title="/veʀitabl/">véritables</span>
+          <span data-bs-toggle="tooltip" title="/mɛʀvɛj/">merveilles </span
+          ><span data-bs-toggle="tooltip" title="/vivɑ̃t/">vivantes</span> ! Dans
+          leur <span data-bs-toggle="tooltip" title="/tʀɔ̃/">tronc</span>, le
+          <span data-bs-toggle="tooltip" title="/kɑ̃bjɔm/">cambium</span>
+          — cette
+          <span data-bs-toggle="tooltip" title="/fin.kuʃ/">fine couche</span>
+          magique —
+          <span data-bs-toggle="tooltip" title="/fabʀik/">fabrique</span> chaque
+          année du bois
+          <span data-bs-toggle="tooltip" title="/nœf/">neuf</span> : à l’<span
+            data-bs-toggle="tooltip"
+            title="/ɛ̃teʀjœʀ/"
+            >intérieur</span
+          >, le
+          <span
+            class="word-info"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="/ɡzilɛm/"
+            data-word="xylème"
+            data-meaning="Tissu végétal assurant le transport de la sève brute des racines vers les feuilles."
+            data-origin="Du grec ancien ξύλον (xúlon, 'bois'), car il forme le bois des plantes."
+            style="
+              cursor: pointer;
+              text-decoration: underline;
+              text-decoration-style: dotted;
+            "
+          >
+            xylème
+          </span>
+          ancien, devenu dur et non
+          <span data-bs-toggle="tooltip" title="/kɔ̃dyktœʀ/">conducteur</span>,
+          forme le bois de cœur, véritable
+          <span data-bs-toggle="tooltip" title="/pilje/">pilier</span> qui
+          <span data-bs-toggle="tooltip" title="/sutjɛ̃/">soutient</span>
+          l’arbre. Plus vers l’extérieur, le xylème jeune, appelé
+          <span data-bs-toggle="tooltip" title="/obje/">aubier</span>, reste
+          bien vivant : c’est lui qui transporte l’eau et les
+          <span data-bs-toggle="tooltip" title="/minero/">minéraux</span> depuis
+          les <span data-bs-toggle="tooltip" title="/ʀasin/">racines</span>. À
+          l’extérieur, le
+          <span data-bs-toggle="tooltip" title="/flɔem/">phloème</span>,
+          <span data-bs-toggle="tooltip" title="/diskʀɛ/">discret</span> mais
+          <span data-bs-toggle="tooltip" title="/ɛ̃dispɑ̃sabl/"
+            >indispensable</span
+          >, fait circuler les sucres produits par les
+          <span data-bs-toggle="tooltip" title="/fœj/">feuilles</span>. Cette
+          activité
+          <span data-bs-toggle="tooltip" title="/sɛzɔnje/">saisonnière</span>
+          dessine de jolis
+          <span data-bs-toggle="tooltip" title="/ano/">anneaux</span> de
+          <span data-bs-toggle="tooltip" title="/kʀwasɑ̃s/">croissance</span>,
+          clairs et <span data-bs-toggle="tooltip" title="/fɔ̃se/">foncés</span>,
+          véritables
+          <span data-bs-toggle="tooltip" title="/aʀʃiv/">archives</span> de la
+          vie de l’arbre : années
+          <span data-bs-toggle="tooltip" title="/ʒenerøz/">généreuses</span>,
+          années difficiles… tout y est
+          <span data-bs-toggle="tooltip" title="/ɛ̃skʀi/">inscrit</span>. Et dans
+          la <span data-bs-toggle="tooltip" title="/sim/">cime</span>, la magie
+          continue : les feuilles,
+          <span data-bs-toggle="tooltip" title="/beɲe/">baignées</span> de
+          soleil,
+          <span data-bs-toggle="tooltip" title="/trɑ̃sfɔrm/">transforment</span>
+          la lumière en nourriture grâce à la
+          <span data-bs-toggle="tooltip" title="/klɔʀɔfil/">chlorophylle</span>
+          <span data-bs-toggle="tooltip" title="/niʃe/">nichée</span> dans leurs
+          <span data-bs-toggle="tooltip" title="/klɔʀɔplast/"
+            >chloroplastes</span
+          >. Elles
+          <span data-bs-toggle="tooltip" title="/kapt/">captent</span> le
+          <span data-bs-toggle="tooltip" title="/diɔksid/">dioxyde</span> de
+          <span data-bs-toggle="tooltip" title="/kaʀbɔn/">carbone</span> par les
+          <span data-bs-toggle="tooltip" title="/stɔmat/">stomates</span>,
+          <span data-bs-toggle="tooltip" title="/ʀ(ə)səv/">reçoivent</span>
+          l’eau par les
+          <span data-bs-toggle="tooltip" title="/nɛʀvyʀ/">nervures</span>, puis
+          <span data-bs-toggle="tooltip" title="/fabʀik/">fabriquent</span> des
+          sucres qui
+          <span data-bs-toggle="tooltip" title="/nuʀis/">nourrissent</span>
+          tout l’arbre.
+          <span data-bs-toggle="tooltip" title="/ɑ̃.sɔm/">En somme</span>, un
+          arbre est une petite
+          <span data-bs-toggle="tooltip" title="/yzin/">usine</span> solaire
+          <span data-bs-toggle="tooltip" title="/ʒwajøzmɑ̃/">joyeusement</span>
+          active, qui travaille sans
+          <span data-bs-toggle="tooltip" title="/ʀ(ə)lɑʃ/">relâche</span> pour
+          <span data-bs-toggle="tooltip" title="/ɡʀɑ̃diʀ/">grandir</span>, vivre
+          et <span data-bs-toggle="tooltip" title="/ɑ̃beliʀ/">embellir</span> le
+          monde.
+        </p>
+      </div>
+      <br />
+
+      <div class="english-text" data-aos="fade-up">
+        <h5><i class="bi bi-translate"></i> &nbsp;English</h5>
+        <p>
+          Trees are truly living wonders! In their trunks, the cambium—that
+          magical, thin layer—produces new wood every year. Inside, the old
+          xylem, now hard and non-conductive, forms the heartwood, the true
+          pillar that supports the tree. Further out, the young xylem, called
+          sapwood, remains very much alive: it is what transports water and
+          minerals from the roots. On the outside, the phloem, discreet but
+          essential, circulates the sugars produced by the leaves. This seasonal
+          activity creates beautiful growth rings, light and dark, veritable
+          archives of the tree's life: bountiful years, difficult years…
+          everything is recorded there. And in the crown, the magic continues:
+          the leaves, bathed in sunlight, transform light into food thanks to
+          the chlorophyll nestled in their chloroplasts. They capture carbon
+          dioxide through the stomata, receive water through the veins, and then
+          produce sugars that nourish the entire tree. In short, a tree is a
+          small, joyfully active solar factory, working tirelessly to grow,
+          live, and beautify the world.
+        </p>
+      </div>
+      <br />
+      <!-- Glossary Section -->
+      <div class="glossary-section" data-aos="fade-up">
+        <h5><i class="bi bi-journal-bookmark"></i> &nbsp;GLOSSARY</h5>
+        <br />
+
+        <table class="glossary-table">
+          <tbody>
+            <tr>
+              <td class="glossary-word">véritable</td>
+              <td style="width: 40px"></td>
+              <td>real</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">merveille</td>
+              <td></td>
+              <td>marvel / wonder</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">tronc</td>
+              <td></td>
+              <td>trunk</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">fine couche</td>
+              <td></td>
+              <td>thin layer</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                fabriquer <span class="pho"> /fabʀike/</span>
+              </td>
+              <td></td>
+              <td>to make</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">neuf</td>
+              <td></td>
+              <td>new</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">pilier</td>
+              <td></td>
+              <td>piller / mainstay</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">soutenir <span> /sut(ə)niʀ/</span></td>
+              <td></td>
+              <td>to support</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">aubier</td>
+              <td></td>
+              <td>sapwood</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">minéral <span> /mineʀal/</span></td>
+              <td></td>
+              <td>mineral</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">racine</td>
+              <td></td>
+              <td>root</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">phloème</td>
+              <td></td>
+              <td>phloem</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">discret</td>
+              <td></td>
+              <td>quiet / discreet</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">feuille</td>
+              <td></td>
+              <td>leaf</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                dessiner <span class="pho"> /desine/</span>
+              </td>
+              <td></td>
+              <td>to show off</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">anneau</td>
+              <td></td>
+              <td>ring</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">croissance</td>
+              <td></td>
+              <td>growth</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">clair <span> /klɛʀ/</span></td>
+              <td></td>
+              <td>light</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">foncé</td>
+              <td></td>
+              <td>dark</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                généreux <span class="pho"> /ʒenerø/</span>
+              </td>
+              <td></td>
+              <td>generous / bountiful</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">inscrit</td>
+              <td></td>
+              <td>registered / recorded</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">cime</td>
+              <td></td>
+              <td>top / peak</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                baigner <span class="pho"> /beɲe/</span>
+              </td>
+              <td></td>
+              <td>to bathe</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">lumière</td>
+              <td></td>
+              <td>light</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">nicher</td>
+              <td></td>
+              <td>to nest</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                capter <span class="pho"> /kapte/</span>
+              </td>
+              <td></td>
+              <td>to harness</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">stomate</td>
+              <td></td>
+              <td>
+                stomata (tiny pores on leaves that open and close to regulate
+                gas exchange)
+              </td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                recevoir <span class="pho"> /ʀ(ə)səvwaʀ/</span>
+              </td>
+              <td></td>
+              <td>to receive</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">nervure</td>
+              <td></td>
+              <td>vein</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                fabriquer <span class="pho"> /fabʀike/</span>
+              </td>
+              <td></td>
+              <td>to produce / to make</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                nourrir <span class="pho"> /nuʀiʀ/</span>
+              </td>
+              <td></td>
+              <td>to feed</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">En somme</td>
+              <td></td>
+              <td>in short</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">joyeusement</td>
+              <td></td>
+              <td>joyfully</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">
+                relâcher <span class="pho"> /ʀ(ə)lɑʃe/</span>
+              </td>
+              <td></td>
+              <td>to relax</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">grandir</td>
+              <td></td>
+              <td>to grow</td>
+            </tr>
+            <tr>
+              <td class="glossary-word">embellir</td>
+              <td></td>
+              <td>to beautify</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <button
+      id="scrollTopBtn"
+      class="btn btn-primary scroll-top-btn"
+      type="button"
+      aria-label="Scroll to top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!--     <div class="bottom-nav">
+      <a class="btn btn-outline-primary" href="index.html">Page One</a>
+      <a class="btn btn-primary" href="dimanche.html">Page Two</a>
+    </div>
+    <p></p>
+    <p></p> -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="module" src="../../assets/js/read.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Initialize all tooltips
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+
+      // Initialize all popovers
+      const popoverTriggerList = document.querySelectorAll(".word-info");
+      const popovers = {};
+
+      popoverTriggerList.forEach((element) => {
+        const meaning = element.getAttribute("data-meaning");
+        const origin = element.getAttribute("data-origin");
+        const word = element.getAttribute("data-word");
+
+        const popoverContent = `
+                <div class="popover-content-custom">
+                    <h6 class="mb-2">${word}</h6>
+                    <p class="mb-2"><strong>Signification:</strong><br>${meaning}</p>
+                    <p class="mb-0"><strong>Origine:</strong><br>${origin}</p>
+                </div>
+            `;
+
+        const popover = new bootstrap.Popover(element, {
+          trigger: "manual",
+          placement: "right",
+          html: true,
+          content: popoverContent,
+          customClass: "word-definition-popover",
+        });
+
+        popovers[element.getAttribute("data-word")] = {
+          element,
+          popover,
+          isOpen: false,
+        };
+
+        // Click event to toggle popover
+        element.addEventListener("click", function (e) {
+          e.preventDefault();
+          const wordKey = this.getAttribute("data-word");
+
+          // Close all other popovers
+          Object.keys(popovers).forEach((key) => {
+            if (key !== wordKey && popovers[key].isOpen) {
+              popovers[key].popover.hide();
+              popovers[key].isOpen = false;
+            }
+          });
+
+          // Toggle current popover
+          if (popovers[wordKey].isOpen) {
+            popovers[wordKey].popover.hide();
+            popovers[wordKey].isOpen = false;
+          } else {
+            popovers[wordKey].popover.show();
+            popovers[wordKey].isOpen = true;
+          }
+        });
+      });
+
+      // Close popover when clicking outside
+      document.addEventListener("click", function (e) {
+        if (
+          !e.target.classList.contains("word-info") &&
+          !e.target.closest(".popover")
+        ) {
+          Object.keys(popovers).forEach((key) => {
+            if (popovers[key].isOpen) {
+              popovers[key].popover.hide();
+              popovers[key].isOpen = false;
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

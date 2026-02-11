@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Everyday Conversations - Conversations de tous les jours</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CHXHM9CZKM"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-CHXHM9CZKM");
+    </script>
+
+    <!-- Favicons -->
+    <link href="/img/favicon.png" rel="icon" />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <!-- Favicons -->
+    <link href="/img/favicon.png" rel="icon" />
+
+    <!-- Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      :root {
+        --french-blue: #0055a4;
+        --french-red: #ef4135;
+        --accent-gold: #d4af37;
+        --text-dark: #2c3e50;
+        --bg-light: #f8f9fa;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text-dark);
+        background: linear-gradient(to bottom, #f4f4f4 0%, #ffffff 100%);
+      }
+      .hero-section {
+        background: linear-gradient(
+          135deg,
+          var(--french-blue) 0%,
+          #003d7a 100%
+        );
+        color: white;
+        padding: 100px 0 80px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0 Q300,40 600,20 T1200,30 L1200,0 Z" fill="rgba(255,255,255,0.05)"/></svg>')
+          repeat-x;
+        opacity: 0.3;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.3rem;
+        opacity: 0.95;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .category-card {
+        background: white;
+        border-radius: 15px;
+        padding: 40px 30px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        height: 100%;
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+      .category-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        border-color: var(--french-blue);
+      }
+      .category-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(
+          135deg,
+          var(--french-blue),
+          var(--french-red)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        font-size: 2rem;
+        color: white;
+        transition: all 0.3s ease;
+      }
+      .category-card:hover .category-icon {
+        transform: rotate(360deg) scale(1.1);
+      }
+      .category-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: var(--french-blue);
+      }
+      .category-description {
+        color: #6c757d;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+      .intro-section {
+        padding: 60px 0;
+        background: var(--bg-light);
+      }
+      .intro-text {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        text-align: center;
+      }
+      .categories-section {
+        padding: 80px 0;
+      }
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+        color: var(--french-blue);
+      }
+      .section-subtitle {
+        text-align: center;
+        color: #6c757d;
+        margin-bottom: 60px;
+        font-size: 1.1rem;
+      }
+      .accent-line {
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--french-blue),
+          var(--french-red)
+        );
+        margin: 0 auto 40px;
+        border-radius: 2px;
+      }
+      h2 {
+        color: rgb(1, 1, 157);
+        font-weight: 700;
+      }
+      .lead {
+        font-weight: 400;
+        color: rgb(1, 1, 157);
+      }
+      nav {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      em {
+        color: #ef4135;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-light bg-white sticky-top">
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <span class="navbar-brand ms-2 fw-semibold">🌈 Français</span>
+        <div class="d-none d-sm-flex align-items-center gap-2">
+          <a href="../index.html" class="btn btn-outline-dark">Home</a>
+          <a href="fr/steps/index.html" class="btn btn-outline-dark"
+            >Language Steps</a
+          >
+          <a href="sitemap.html" target="_blank" class="btn btn-outline-dark"
+            >Site Map</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-4 py-lg-5">
+      <header class="mb-4" data-aos="fade-up">
+        <h2 class="mb-2 text-center">French</h2>
+        <p class="lead lead-intro text-center">
+          Bonjour! Ready to add a little <em>joie de vivre</em> to your life?
+          😄<br />
+          Do you know that learning a foreign language is not only fun and
+          challenging, but it stimulates cognitive abilities, enhances memory,
+          and opens doors to new cultures? Dive into the world of French with
+          us!
+        </p>
+      </header>
+
+      <!-- Categories Section -->
+      <section class="categories-section">
+        <div class="container">
+          <div data-aos="fade-up">
+            <h2 class="section-title">Explore Topics</h2>
+            <p class="section-subtitle">
+              Click on any topic to discover articles and insights
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Comedy -->
+            <div
+              class="col-md-6 col-lg-4"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <a
+                class="category-card d-block text-decoration-none text-reset"
+                href="comedy/index.html"
+              >
+                <div class="category-icon">
+                  <i class="fas fa-laugh"></i>
+                </div>
+                <h3 class="category-title">Comedy</h3>
+                <p class="category-description">
+                  Explore French humor, from wordplay to stand-up, and
+                  understand what makes the French laugh
+                </p>
+              </a>
+            </div>
+
+            <!-- Pronunciation -->
+            <div
+              class="col-md-6 col-lg-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <a
+                class="category-card d-block text-decoration-none text-reset"
+                href="fr/pron/RFI251106/index.html"
+              >
+                <div class="category-icon">
+                  <i class="fas fa-microphone-alt"></i>
+                </div>
+                <h3 class="category-title">Pronunciation</h3>
+                <p class="category-description">
+                  Master French sounds, from nasal vowels to the uvular R, and
+                  speak with authentic accent
+                </p>
+              </a>
+            </div>
+
+            <!-- Enunciation -->
+            <div
+              class="col-md-6 col-lg-4"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <a
+                class="category-card d-block text-decoration-none text-reset"
+                href="fr/enunciation/r/index.html"
+              >
+                <div class="category-icon">
+                  <i class="fas fa-volume-up"></i>
+                </div>
+                <h3 class="category-title">Enunciation</h3>
+                <p class="category-description">
+                  Learn the art of clear articulation and the rhythm that makes
+                  French so melodious
+                </p>
+              </a>
+            </div>
+
+            <!-- Expressions -->
+            <div
+              class="col-md-6 col-lg-4"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <a
+                class="category-card d-block text-decoration-none text-reset"
+                href="fr/expression/archive.html"
+              >
+                <div class="category-icon">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <h3 class="category-title">Expressions</h3>
+                <p class="category-description">
+                  Discover colorful idioms and everyday phrases that bring
+                  French conversation to life
+                </p>
+              </a>
+            </div>
+
+            <!-- Grammar -->
+            <div
+              class="col-md-6 col-lg-4"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <a
+                class="category-card d-block text-decoration-none text-reset"
+                href="fr/grammar/index.html"
+              >
+                <div class="category-icon">
+                  <i class="fas fa-book"></i>
+                </div>
+                <h3 class="category-title">Grammar</h3>
+                <p class="category-description">
+                  Navigate verb conjugations, gender agreements, and the elegant
+                  structure of French
+                </p>
+              </a>
+            </div>
+
+            <!-- Reading -->
+            <div
+              class="col-md-6 col-lg-4"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <a
+                class="category-card d-block text-decoration-none text-reset"
+                href="fr/reading/index.html"
+              >
+                <div class="category-icon">
+                  <i class="fa-solid fa-book-open"></i>
+                </div>
+                <h3 class="category-title">Reading</h3>
+                <p class="category-description">
+                  Reading opens your mind, builds vocabulary, and makes learning
+                  naturally fun.
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100,
+        });
+
+        // Add click handlers for category cards
+        document.querySelectorAll(".category-card").forEach((card) => {
+          card.addEventListener("click", function () {
+            const title = this.querySelector(".category-title").textContent;
+            console.log(`Clicked on ${title}`);
+            // You can add navigation logic here
+            // window.location.href = `/french/${title.toLowerCase()}`;
+          });
+        });
+      </script>
+    </main>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      defer
+    ></script>
+    <script type="module" src="assets/js/everyday.js"></script>
+  </body>
+</html>

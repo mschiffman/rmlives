@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="theme-color" content="#3498db" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="English App" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/png" href="icon-192.png" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Clear Everyday English - Learning Hub</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-section">
+        <h1>Clear Everyday English Learning Hub</h1>
+        <p>Multi-Language Learning App</p>
+      </div>
+
+      <!-- Browse View -->
+      <div id="browseView" class="browse-view">
+        <div class="category-filters" id="categoryFilters"></div>
+        <div class="topics-grid" id="topicsGrid"></div>
+      </div>
+
+      <!-- Game View -->
+      <div id="gameView" class="game-view">
+        <button class="back-btn" onclick="showBrowseView()">
+          <span>&larr;</span> Back to Topics
+        </button>
+
+        <div class="content-area">
+          <h2 id="lessonTitle" class="lesson-title"></h2>
+          <p class="lesson-description">
+            Watch the video, then practice matching!
+          </p>
+
+          <div
+            id="explanationBox"
+            class="explanation-box"
+            style="display: none"
+          >
+            <h5 id="explanationTitle"></h5>
+            <p id="explanationText"></p>
+          </div>
+
+          <div
+            id="languageSelector"
+            class="language-selector"
+            style="display: none"
+          >
+            <label for="languageSelect">Choose your language:</label>
+            <select id="languageSelect" onchange="changeLanguage()">
+              <option value="my">Myanmar (Burmese)</option>
+              <option value="zh">Chinese</option>
+              <option value="fr">French</option>
+              <option value="es">Spanish</option>
+            </select>
+          </div>
+
+          <button id="watchBtn" class="watch-btn" onclick="openVideo()">
+            Watch Video on YouTube
+          </button>
+
+          <hr class="divider" />
+
+          <div class="score-display">
+            <span class="score-badge">
+              Matches: <span id="matchCount">0</span> /
+              <span id="totalPairs">0</span>
+            </span>
+          </div>
+
+          <p id="instruction" class="instruction"></p>
+
+          <div class="game-columns">
+            <div class="game-column">
+              <div id="sourceHeader" class="column-header source-header"></div>
+              <div id="sourceColumn"></div>
+            </div>
+            <div class="game-column">
+              <div id="targetHeader" class="column-header target-header"></div>
+              <div id="targetColumn"></div>
+            </div>
+          </div>
+
+          <button class="reset-btn" onclick="initGame()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Icon mapping
+      const icons = {
+        health: "🏥",
+        mountain: "⛰️",
+        polite: "🤝",
+        person: "👤",
+        book: "📖",
+        chat: "💬",
+        pencil: "✏️",
+      };
+
+      const languageNames = {
+        my: "Myanmar (Burmese)",
+        zh: "Chinese",
+        fr: "French",
+        es: "Spanish",
+      };
+
+      // Embedded lesson data (works without server)
+      const embeddedLessonsIndex = {
+        categories: [
+          { id: "vocabulary", name: "Vocabulary", icon: "book" },
+          { id: "expressions", name: "Expressions", icon: "chat" },
+          { id: "grammar", name: "Grammar", icon: "pencil" },
+        ],
+        lessons: [
+          {
+            id: "health",
+            title: "Health Problems",
+            description: "Common health issues and symptoms",
+            category: "vocabulary",
+            icon: "health",
+            type: "vocab",
+            videoID: "IkFgxnXuxDY",
+            audioFolder: "audio/health1",
+            file: "health.json",
+          },
+          {
+            id: "landforms",
+            title: "Landforms",
+            description: "Geographic features and landscapes",
+            category: "vocabulary",
+            icon: "mountain",
+            type: "vocab",
+            videoID: "luehL_zNbwk",
+            audioFolder: "audio/landforms",
+            file: "landforms.json",
+          },
+          {
+            id: "polite",
+            title: "Polite Phrases",
+            description: "Direct vs polite expressions",
+            category: "expressions",
+            icon: "polite",
+            type: "phrases",
+            videoID: "kdI_9vHJFt0",
+            audioFolder: "audio/polite",
+            file: "polite.json",
+          },
+          {
+            id: "introduction",
+            title: "Self Introduction",
+            description: "Questions and answers for introductions",
+            category: "expressions",
+            icon: "person",
+            type: "qa",
+            videoID: "g9fHOEkShWI",
+            audioFolder: "audio/introduction",
+            file: "introduction.json",
+          },
+        ],
+      };
+
+      const embeddedLessons = {
+        health: {
+          id: "health",
+          title: "Common Health Problems",
+          type: "vocab",
+          vocab: [
+            {
+              id: 1,
+              en: "Sore throat",
+              my: "လည်ချောင်းနာခြင်း",
+              zh: "喉咙痛",
+              fr: "le mal de gorge",
+              es: "el dolor de garganta",
+            },
+            {
+              id: 2,
+              en: "Cough",
+              my: "ချောင်းဆိုးခြင်း",
+              zh: "咳嗽",
+              fr: "la toux",
+              es: "la tos",
+            },
+            {
+              id: 3,
+              en: "Runny nose",
+              my: "နှာရည်ယိုခြင်း",
+              zh: "流鼻涕",
+              fr: "le nez qui coule",
+              es: "la secreción nasal",
+            },
+            {
+              id: 4,
+              en: "Headache",
+              my: "ခေါင်းကိုက်ခြင်း",
+              zh: "头痛",
+              fr: "le mal de tête",
+              es: "el dolor de cabeza",
+            },
+            {
+              id: 5,
+              en: "The flu",
+              my: "တုပ်ကွေးဖျားနာခြင်း",
+              zh: "流感",
+              fr: "la grippe",
+              es: "la gripe",
+            },
+            {
+              id: 6,
+              en: "Pink eye",
+              my: "မျက်စိနာခြင်း",
+              zh: "红眼病",
+              fr: "la conjonctivite",
+              es: "la conjuntivitis",
+            },
+            {
+              id: 7,
+              en: "Diarrhea",
+              my: "ဝမ်းလျှောခြင်း",
+              zh: "腹泻",
+              fr: "la diarrhée",
+              es: "la diarrea",
+            },
+            {
+              id: 8,
+              en: "Indigestion",
+              my: "အစာမကျေဖြစ်ခြင်း",
+              zh: "消化不良",
+              fr: "l'indigestion",
+              es: "la indigestión",
+            },
+          ],
+        },
+        landforms: {
+          id: "landforms",
+          title: "Landforms and Landscapes",
+          type: "vocab",
+          vocab: [
+            {
+              id: 1,
+              en: "Mountain",
+              my: "တောင်",
+              zh: "山",
+              fr: "la montagne",
+              es: "la montaña",
+            },
+            {
+              id: 2,
+              en: "Hill",
+              my: "ကုန်းမြင့်",
+              zh: "小山",
+              fr: "la colline",
+              es: "la colina",
+            },
+            {
+              id: 3,
+              en: "Plateau",
+              my: "ကုန်းပြင်မြင့်",
+              zh: "高原",
+              fr: "le plateau",
+              es: "la meseta",
+            },
+            {
+              id: 4,
+              en: "Glacier",
+              my: "ရေခဲမြစ်",
+              zh: "冰川",
+              fr: "le glacier",
+              es: "el glaciar",
+            },
+            {
+              id: 5,
+              en: "Stream",
+              my: "စမ်းချောင်း",
+              zh: "溪流",
+              fr: "le ruisseau",
+              es: "el arroyo",
+            },
+            {
+              id: 6,
+              en: "River",
+              my: "မြစ်",
+              zh: "河流",
+              fr: "la rivière",
+              es: "el río",
+            },
+            {
+              id: 7,
+              en: "Waterfall",
+              my: "ရေတံခွန်",
+              zh: "瀑布",
+              fr: "la cascade",
+              es: "la cascada",
+            },
+            {
+              id: 8,
+              en: "Sea",
+              my: "ပင်လယ်",
+              zh: "海",
+              fr: "la mer",
+              es: "el mar",
+            },
+            {
+              id: 9,
+              en: "Ocean",
+              my: "သမုဒ္ဒရာ",
+              zh: "大洋",
+              fr: "l'océan",
+              es: "el océano",
+            },
+            {
+              id: 10,
+              en: "Lake",
+              my: "အိုင်",
+              zh: "湖泊",
+              fr: "le lac",
+              es: "el lago",
+            },
+            {
+              id: 11,
+              en: "Pond",
+              my: "ကန်",
+              zh: "池塘",
+              fr: "l'étang",
+              es: "el estanque",
+            },
+            {
+              id: 12,
+              en: "Forest",
+              my: "သစ်တော",
+              zh: "森林",
+              fr: "la forêt",
+              es: "el bosque",
+            },
+            {
+              id: 13,
+              en: "Plain",
+              my: "လွင်ပြင်",
+              zh: "平原",
+              fr: "la plaine",
+              es: "la llanura",
+            },
+            {
+              id: 14,
+              en: "Prairie",
+              my: "မြက်ခင်းပြင်",
+              zh: "大草原",
+              fr: "la prairie",
+              es: "la pradera",
+            },
+            {
+              id: 15,
+              en: "Island",
+              my: "ကျွန်း",
+              zh: "岛屿",
+              fr: "l'île",
+              es: "la isla",
+            },
+            {
+              id: 16,
+              en: "Beach",
+              my: "ကမ်းခြေ",
+              zh: "海滩",
+              fr: "la plage",
+              es: "la playa",
+            },
+            {
+              id: 17,
+              en: "Cliff",
+              my: "ကမ်းပါးယံ",
+              zh: "悬崖",
+              fr: "la falaise",
+              es: "el acantilado",
+            },
+          ],
+        },
+        polite: {
+          id: "polite",
+          title: "Polite Conversations",
+          type: "phrases",
+          explanation: {
+            title: "Key Idea",
+            text: 'Polite English uses questions, modal verbs (could, would), and words like "please" and "sorry" to show respect and make conversations smoother.',
+          },
+          sourceLabel: "Direct (Less Polite)",
+          targetLabel: "Polite (Better)",
+          vocab: [
+            { id: 1, source: "Help me.", target: "Could you help me, please?" },
+            {
+              id: 2,
+              source: "I want water.",
+              target: "Could I have some water, please?",
+            },
+            { id: 3, source: "Wait.", target: "Sorry to interrupt." },
+            { id: 4, source: "No.", target: "Sorry, I can't right now." },
+            {
+              id: 5,
+              source: "What?",
+              target: "Sorry, could you say that again?",
+            },
+            {
+              id: 6,
+              source: "Move.",
+              target: "Excuse me, could you move please?",
+            },
+            {
+              id: 7,
+              source: "Give me that.",
+              target: "Could I have that, please?",
+            },
+            {
+              id: 8,
+              source: "I don't understand.",
+              target: "I'm sorry, I don't quite understand.",
+            },
+            { id: 9, source: "Tell me.", target: "Could you tell me, please?" },
+            {
+              id: 10,
+              source: "Don't be late.",
+              target: "Try to be on time, please.",
+            },
+          ],
+        },
+        introduction: {
+          id: "introduction",
+          title: "Introducing Yourself",
+          type: "qa",
+          explanation: {
+            title: "Key Idea",
+            text: 'A good self-introduction includes your name, where you\'re from, what you do, your age, and where you live. Use contractions like "I\'m" and "What\'s" to sound more natural.',
+          },
+          sourceLabel: "Question",
+          targetLabel: "Answer",
+          vocab: [
+            {
+              id: 1,
+              topic: "name",
+              source: "What's your name?",
+              target: "My name is...",
+            },
+            {
+              id: 2,
+              topic: "father",
+              source: "What's your father's name?",
+              target: "My father's name is...",
+            },
+            {
+              id: 3,
+              topic: "mother",
+              source: "What's your mother's name?",
+              target: "My mother's name is...",
+            },
+            {
+              id: 4,
+              topic: "origin",
+              source: "Where are you from?",
+              target: "I'm from...",
+            },
+            {
+              id: 5,
+              topic: "occupation",
+              source: "What do you do?",
+              target: "I'm a... / I work in...",
+            },
+            {
+              id: 6,
+              topic: "age",
+              source: "How old are you?",
+              target: "I'm ... years old.",
+            },
+            {
+              id: 7,
+              topic: "dob",
+              source: "What's your date of birth?",
+              target: "My date of birth is...",
+            },
+            {
+              id: 8,
+              topic: "marital",
+              source: "Are you married?",
+              target: "Yes, I am. / No, I'm single.",
+            },
+            {
+              id: 9,
+              topic: "residence",
+              source: "Where do you live?",
+              target: "I live in...",
+            },
+          ],
+        },
+      };
+
+      let lessonsIndex = null;
+      let currentLesson = null;
+      let currentLessonMeta = null;
+      let currentLanguage = "my";
+      let selectedSource = null;
+      let selectedTarget = null;
+      let matchedPairs = new Set();
+      let matchCount = 0;
+
+      const successSound = new Audio(
+        "https://actions.google.com/sounds/v1/foley/beeps_and_boops.ogg",
+      );
+
+      // Load lessons index (try fetch first, fall back to embedded)
+      async function loadLessonsIndex() {
+        try {
+          const response = await fetch("lessons/lessons-index.json");
+          if (!response.ok) throw new Error("Fetch failed");
+          lessonsIndex = await response.json();
+        } catch (err) {
+          console.log("Using embedded lessons data");
+          lessonsIndex = embeddedLessonsIndex;
+        }
+        renderCategoryFilters();
+        renderTopicsGrid();
+      }
+
+      function renderCategoryFilters() {
+        const container = document.getElementById("categoryFilters");
+        container.innerHTML = `<button class="filter-btn active" data-category="all">All</button>`;
+
+        lessonsIndex.categories.forEach((cat) => {
+          container.innerHTML += `
+            <button class="filter-btn" data-category="${cat.id}">${cat.name}</button>
+          `;
+        });
+
+        container.querySelectorAll(".filter-btn").forEach((btn) => {
+          btn.addEventListener("click", () =>
+            filterByCategory(btn.dataset.category),
+          );
+        });
+      }
+
+      function renderTopicsGrid() {
+        const container = document.getElementById("topicsGrid");
+        container.innerHTML = "";
+
+        lessonsIndex.lessons.forEach((lesson) => {
+          const card = document.createElement("div");
+          card.className = "topic-card";
+          card.dataset.category = lesson.category;
+          card.innerHTML = `
+            <div class="topic-card-header">
+              <span class="topic-icon">${icons[lesson.icon] || "📚"}</span>
+              <h3>${lesson.title}</h3>
+            </div>
+            <p>${lesson.description}</p>
+            <div class="topic-meta">
+              <span class="category-badge ${lesson.category}">${lesson.category}</span>
+            </div>
+          `;
+          card.addEventListener("click", () => loadLesson(lesson));
+          container.appendChild(card);
+        });
+      }
+
+      function filterByCategory(category) {
+        document.querySelectorAll(".filter-btn").forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.category === category);
+        });
+
+        document.querySelectorAll(".topic-card").forEach((card) => {
+          if (category === "all" || card.dataset.category === category) {
+            card.classList.remove("hidden");
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+      }
+
+      async function loadLesson(lessonMeta) {
+        try {
+          const response = await fetch(`lessons/${lessonMeta.file}`);
+          if (!response.ok) throw new Error("Fetch failed");
+          currentLesson = await response.json();
+        } catch (err) {
+          // Fall back to embedded data
+          currentLesson = embeddedLessons[lessonMeta.id];
+        }
+        currentLessonMeta = lessonMeta;
+        showGameView();
+        setupGame();
+      }
+
+      function showGameView() {
+        document.getElementById("browseView").classList.add("hidden");
+        document.getElementById("gameView").classList.add("active");
+      }
+
+      function showBrowseView() {
+        document.getElementById("browseView").classList.remove("hidden");
+        document.getElementById("gameView").classList.remove("active");
+      }
+
+      function setupGame() {
+        document.getElementById("lessonTitle").textContent =
+          currentLesson.title;
+
+        // Handle explanation box
+        const expBox = document.getElementById("explanationBox");
+        if (currentLesson.explanation) {
+          document.getElementById("explanationTitle").textContent =
+            currentLesson.explanation.title;
+          document.getElementById("explanationText").textContent =
+            currentLesson.explanation.text;
+          expBox.style.display = "block";
+        } else {
+          expBox.style.display = "none";
+        }
+
+        // Handle language selector (only for vocab type)
+        const langSelector = document.getElementById("languageSelector");
+        if (currentLesson.type === "vocab") {
+          langSelector.style.display = "block";
+          document.getElementById("instruction").textContent =
+            "Click on the expression in your language and then click the matching English expression.";
+          document.getElementById("sourceHeader").textContent = "English";
+          document.getElementById("targetHeader").textContent =
+            languageNames[currentLanguage];
+        } else {
+          langSelector.style.display = "none";
+          document.getElementById("instruction").textContent =
+            `Click on the ${currentLesson.sourceLabel || "source"} and then click the matching ${currentLesson.targetLabel || "target"}.`;
+          document.getElementById("sourceHeader").textContent =
+            currentLesson.sourceLabel || "Source";
+          document.getElementById("targetHeader").textContent =
+            currentLesson.targetLabel || "Target";
+        }
+
+        initGame();
+      }
+
+      function shuffle(array) {
+        const newArray = [...array];
+        for (let i = newArray.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+      }
+
+      function getAudioPath(text) {
+        if (!currentLessonMeta.audioFolder) return null;
+
+        // For phrases and qa types, clean up the filename (remove . and ?, replace apostrophes with _)
+        if (currentLesson.type === "phrases") {
+          const filename = text
+            .replace(/[.?]/g, "")
+            .replace(/[\u0027\u2019]/g, "_");
+          return `${currentLessonMeta.audioFolder}/${encodeURIComponent(filename)}.mp3`;
+        }
+        return `${currentLessonMeta.audioFolder}/${encodeURIComponent(text)}.mp3`;
+      }
+
+      function getQaAudioPath(topic, isSource) {
+        if (!currentLessonMeta.audioFolder || !topic) return null;
+        const safeTopic = encodeURIComponent(topic);
+        const prefix = isSource ? "qn" : "ans";
+        return `${currentLessonMeta.audioFolder}/${prefix}_${safeTopic}.mp3`;
+      }
+
+      function playAudio(path) {
+        if (path) {
+          const audio = new Audio(path);
+          audio.play().catch((e) => console.log("Audio play failed:", e));
+        }
+      }
+
+      function createCard(text, pairId, isSource, topic = null) {
+        const card = document.createElement("div");
+        card.className = "game-card";
+        card.dataset.pairId = pairId;
+        card.innerHTML = `<span class="card-text">${text}</span>`;
+        card.addEventListener("click", () =>
+          handleCardClick(card, isSource, text, topic),
+        );
+        return card;
+      }
+
+      function handleCardClick(card, isSource, text, topic) {
+        if (matchedPairs.has(card.dataset.pairId)) return;
+
+        // Play audio for vocab type on English cards, for phrases on any card, for qa on source cards
+        if (currentLesson.type === "vocab" && isSource) {
+          playAudio(getAudioPath(text));
+        } else if (currentLesson.type === "phrases") {
+          playAudio(getAudioPath(text));
+        } else if (currentLesson.type === "qa") {
+          playAudio(getQaAudioPath(topic, isSource));
+        }
+
+        if (isSource) {
+          if (selectedSource) selectedSource.classList.remove("selected");
+          selectedSource = card;
+          card.classList.add("selected");
+        } else {
+          if (selectedTarget) selectedTarget.classList.remove("selected");
+          selectedTarget = card;
+          card.classList.add("selected");
+        }
+
+        if (selectedSource && selectedTarget) {
+          checkMatch();
+        }
+      }
+
+      function checkMatch() {
+        const sourceId = selectedSource.dataset.pairId;
+        const targetId = selectedTarget.dataset.pairId;
+
+        if (sourceId === targetId) {
+          successSound.currentTime = 0;
+          successSound.play().catch((e) => {});
+
+          selectedSource.classList.remove("selected");
+          selectedTarget.classList.remove("selected");
+          selectedSource.classList.add("matched");
+          selectedTarget.classList.add("matched");
+
+          selectedSource.innerHTML +=
+            '<span class="matched-check">&#10003;</span>';
+          selectedTarget.innerHTML +=
+            '<span class="matched-check">&#10003;</span>';
+
+          matchedPairs.add(sourceId);
+          matchCount++;
+          document.getElementById("matchCount").textContent = matchCount;
+
+          if (matchCount === currentLesson.vocab.length) {
+            setTimeout(() => {
+              alert("Congratulations! You matched all pairs!");
+            }, 300);
+          }
+
+          selectedSource = null;
+          selectedTarget = null;
+        } else {
+          selectedSource.classList.add("incorrect");
+          selectedTarget.classList.add("incorrect");
+
+          setTimeout(() => {
+            selectedSource.classList.remove("selected", "incorrect");
+            selectedTarget.classList.remove("selected", "incorrect");
+            selectedSource = null;
+            selectedTarget = null;
+          }, 600);
+        }
+      }
+
+      function initGame() {
+        const sourceColumn = document.getElementById("sourceColumn");
+        const targetColumn = document.getElementById("targetColumn");
+
+        sourceColumn.innerHTML = "";
+        targetColumn.innerHTML = "";
+
+        selectedSource = null;
+        selectedTarget = null;
+        matchedPairs.clear();
+        matchCount = 0;
+        document.getElementById("matchCount").textContent = "0";
+        document.getElementById("totalPairs").textContent =
+          currentLesson.vocab.length;
+
+        const shuffledTarget = shuffle(currentLesson.vocab);
+
+        // Determine which fields to use based on lesson type
+        if (currentLesson.type === "vocab") {
+          document.getElementById("targetHeader").textContent =
+            languageNames[currentLanguage];
+
+          currentLesson.vocab.forEach((pair) => {
+            sourceColumn.appendChild(createCard(pair.en, pair.id, true));
+          });
+          shuffledTarget.forEach((pair) => {
+            targetColumn.appendChild(
+              createCard(pair[currentLanguage], pair.id, false),
+            );
+          });
+        } else {
+          // phrases or qa type
+          currentLesson.vocab.forEach((pair) => {
+            sourceColumn.appendChild(
+              createCard(pair.source, pair.id, true, pair.topic),
+            );
+          });
+          shuffledTarget.forEach((pair) => {
+            targetColumn.appendChild(
+              createCard(pair.target, pair.id, false, pair.topic),
+            );
+          });
+        }
+      }
+
+      function changeLanguage() {
+        currentLanguage = document.getElementById("languageSelect").value;
+        initGame();
+      }
+
+      function openVideo() {
+        if (
+          currentLessonMeta &&
+          currentLessonMeta.videoID &&
+          currentLessonMeta.videoID !== "YOUR_VIDEO_ID_HERE"
+        ) {
+          window.open(
+            `https://www.youtube.com/watch?v=${currentLessonMeta.videoID}`,
+            "_blank",
+          );
+        } else {
+          alert("Video not available for this lesson yet.");
+        }
+      }
+
+      // Initialize
+      loadLessonsIndex();
+
+      // Register service worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./sw.js")
+          .then(() => console.log("Service Worker registered"))
+          .catch((err) =>
+            console.log("Service Worker registration failed:", err),
+          );
+      }
+    </script>
+  </body>
+</html>
