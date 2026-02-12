@@ -116,7 +116,7 @@ document.getElementById("sidebar-nav").innerHTML = `
           <i class="bi bi-journal-text"></i> French Main
         </a>
 
-        <a class="nav-link" href="../../pron/RFI251106/index.html">
+        <a class="nav-link" href="../../pron/RFI260202/index.html">
           <i class="bi bi-volume-up"></i> French Pronunciation
         </a>
 

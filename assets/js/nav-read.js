@@ -141,7 +141,7 @@ document.getElementById("navbar").innerHTML = `
   <a href="../expression/archive.html" class="sidebar-link">
     <i class="bi bi-journal-text"></i> French Expressions
   </a>  
-  <a href="../pron/RFI251106/index.html" class="sidebar-link">
+  <a href="../pron/RFI260202/index.html" class="sidebar-link">
     <i class="bi bi-soundwave"></i> French Pronunciation
   </a>
   <a href="../enunciation/r/index.html" class="sidebar-link">

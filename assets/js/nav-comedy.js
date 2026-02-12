@@ -54,7 +54,7 @@
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="../fr/pron/RFI251106/index.html">
+                <a class="dropdown-item" href="../fr/pron/RFI260202/index.html">
                   French Pronunciations
                 </a>
               </li>
@@ -186,7 +186,7 @@
 
     heroHeader.insertAdjacentHTML(
       "afterbegin",
-      buildNavMarkup(navTitle).trim()
+      buildNavMarkup(navTitle).trim(),
     );
   };
 

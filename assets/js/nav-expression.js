@@ -43,7 +43,7 @@ document.getElementById("navbar").innerHTML = `
               <a class="dropdown-item" href="../../french.html">French Main</a>
             </li>
             <li>
-              <a class="dropdown-item" href="../pron/RFI251106/index.html">French Pronunciation</a>
+              <a class="dropdown-item" href="../pron/RFI260202/index.html">French Pronunciation</a>
             </li>
             <li>
               <a class="dropdown-item" href="../enunciation/r/index.html">French Enunciation</a>
