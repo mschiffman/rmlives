@@ -163,14 +163,13 @@
             input.classList.add("wrong");
             input.classList.remove("correct");
 
-            // Show correct answer
-            const feedback = document.createElement("div");
+            // Show correct answer at end of sentence
+            const feedback = document.createElement("span");
             feedback.className = "correction-feedback";
             feedback.style.color = "#27ae60";
-            feedback.style.marginTop = "5px";
-            feedback.style.fontSize = "0.9em";
             feedback.style.fontWeight = "bold";
-            feedback.innerText = `Correct answer: ${input.getAttribute("data-answer")}`;
+            feedback.style.marginLeft = "6px";
+            feedback.innerText = `[${input.getAttribute("data-answer")}]`;
             parent.appendChild(feedback);
           }
         });
