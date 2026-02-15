@@ -14,7 +14,9 @@
     "future.html": "future",
     "conditionnel.html": "conditionnel",
     "subjonctif.html": "subjonctif",
+    "plus-que-parfait.html": "plus-que-parfait",
     "exercice.html": "exercice",
+    "fc-present.html": "flashcard",
   };
 
   const navItems = [
@@ -91,9 +93,21 @@
             },
             {
               type: "link",
+              id: "plus-que-parfait",
+              label: "plus-que-parfait",
+              href: "plus-que-parfait.html",
+            },
+            {
+              type: "link",
               id: "exercice",
               label: "Exercice",
               href: "exercice.html",
+            },
+            {
+              type: "link",
+              id: "flashcard",
+              label: "flashcard",
+              href: "fc-present.html",
             },
           ],
         },
