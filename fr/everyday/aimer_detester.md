@@ -259,9 +259,9 @@ Consigne : Complétez avec le mot correct.
 
 > <span onclick="playAudio('112')">**Cloze 1 — Préférences**</span>
 >
-> A : Tu **\_\_\_\_** (préfères) le café ou le thé ?<br>
+> A : Tu **\_\_\_\_** (préférer) le café ou le thé ?<br>
 > B : Je préfère le thé.<br>
-> A : Moi, j'**\_\_\_\_** (aime) mieux le café.<br>
+> A : Moi, j'**\_\_\_\_** (aimer) mieux le café.<br>
 >
 > <details><summary>**Réponses**</summary>
 > préfères / aime
@@ -270,7 +270,7 @@ Consigne : Complétez avec le mot correct.
 > <span onclick="playAudio('113')">**Cloze 2 — Ce qu'on déteste**</span>
 >
 > A : Tu aimes les légumes ?<br>
-> B : Oui, mais je **\_\_\_\_** (déteste) les épinards.<br>
+> B : Oui, mais je **\_\_\_\_** (détester) les épinards.<br>
 > A : Moi aussi, je n'aime **\_\_\_\_** (pas) du tout ça !<br>
 >
 > <details><summary>**Réponses**</summary>
@@ -289,8 +289,8 @@ Consigne : Complétez avec le mot correct.
 
 > <span onclick="playAudio('115')">**Cloze 4 — Nourriture**</span>
 >
-> A : C'est quoi ton plat **\_\_\_\_** (préféré) ?<br>
-> B : J'**\_\_\_\_** (adore) les pâtes à la carbonara.<br>
+> A : C'est quoi ton plat **\_\_\_\_** (préférer) ?<br>
+> B : J'**\_\_\_\_** (adorer) les pâtes à la carbonara.<br>
 > A : Moi aussi, c'est délicieux !<br>
 >
 > <details><summary>**Réponses**</summary>
@@ -301,7 +301,7 @@ Consigne : Complétez avec le mot correct.
 >
 > A : Tu aimes le sport ?<br>
 > B : **\_\_\_\_** (Bof), pas trop. Je préfère lire.<br>
-> A : Ça **\_\_\_\_** (dépend) du sport, non ?<br>
+> A : Ça **\_\_\_\_** (dépendre) du sport, non ?<br>
 >
 > <details><summary>**Réponses**</summary>
 > Bof / dépend
@@ -336,15 +336,15 @@ Consigne : Associez l'expression à son contraire.
 
 Du plus positif au plus négatif :
 
-| Niveau | Expression                                                                                                   | Exemple                         |
-| ------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------- |
-| +++    | <span onclick="playAudio('117')">J'adore</span>                                                              | J'adore le chocolat !           |
-| ++     | <span onclick="playAudio('118')">J'aime beaucoup</span>                                                      | J'aime beaucoup ce film.        |
-| +      | <span onclick="playAudio('119')">J'aime bien</span>                                                          | J'aime bien ce restaurant.      |
-| 0      | <span onclick="playAudio('120')">Ça va</span> / <span onclick="playAudio('121')">Bof</span>                  | Bof, c'est moyen.               |
-| -      | <span onclick="playAudio('122')">Je n'aime pas trop</span>                                                   | Je n'aime pas trop les huîtres. |
-| --     | <span onclick="playAudio('123')">Je n'aime pas</span>                                                        | Je n'aime pas le poisson.       |
-| ---    | <span onclick="playAudio('124')">Je déteste</span> / <span onclick="playAudio('125')">J'ai horreur de</span> | Je déteste le froid !           |
+| Niveau | Expression                                                           | Exemple                         |
+| ------ | -------------------------------------------------------------------- | ------------------------------- |
+| +++    | <span onclick="playAudio('117')">J'adore</span>                      | J'adore le chocolat !           |
+| ++     | <span onclick="playAudio('118')">J'aime beaucoup</span>              | J'aime beaucoup ce film.        |
+| +      | <span onclick="playAudio('119')">J'aime bien</span>                  | J'aime bien ce restaurant.      |
+| 0      | <span onclick="playAudio('120')">Ça va / Bof</span>                  | Bof, c'est moyen.               |
+| -      | <span onclick="playAudio('121')">Je n'aime pas trop</span>           | Je n'aime pas trop les huîtres. |
+| --     | <span onclick="playAudio('122')">Je n'aime pas.</span>               | Je n'aime pas les plats épicés. |
+| ---    | <span onclick="playAudio('123')">Je déteste / J'ai horreur de</span> | Je déteste le froid !           |
 
 ---
 
@@ -352,19 +352,19 @@ Du plus positif au plus négatif :
 
 Consigne : Que dites-vous dans ces situations ?
 
-1. Quelqu'un vous demande si vous aimez le café.
-2. Vous adorez un plat au restaurant.
-3. Quelqu'un vous propose une activité que vous n'aimez pas.
-4. Vous voulez savoir ce que votre ami préfère.
-5. Vous hésitez entre deux choses.
+1. <span onclick="playAudio('124')">Quelqu'un vous demande si vous aimez le café.</span>
+2. <span onclick="playAudio('125')">Vous adorez un plat au restaurant.</span>
+3. <span onclick="playAudio('126')">Quelqu'un vous propose une activité que vous n'aimez pas.</span>
+4. <span onclick="playAudio('127')">Vous voulez savoir ce que votre ami préfère.</span>
+5. <span onclick="playAudio('128')">Vous hésitez entre deux choses.</span>
 
 <details><summary>**Réponses possibles**</summary>
 
-1. Oui, j'aime bien le café. / Non, je préfère le thé.
-2. C'est délicieux ! J'adore ! / C'est mon plat préféré.
-3. Merci, mais ce n'est pas mon truc. / Non merci, je n'aime pas vraiment ça.
-4. Tu préfères quoi ? / Qu'est-ce que tu aimes ?
-5. Je ne sais pas... Ça dépend. / J'aime les deux.
+1. <span onclick="playAudio('129')">Oui, j'aime bien le café.</span> / <span onclick="playAudio('130')">Non, je préfère le thé.</span>
+2. <span onclick="playAudio('131')">C'est délicieux ! J'adore !</span> / <span onclick="playAudio('132')">C'est mon plat préféré.</span>
+3. <span onclick="playAudio('133')">Merci, mais ce n'est pas mon truc.</span> / <span onclick="playAudio('134')">Non merci, je n'aime pas vraiment ça.</span>
+4. <span onclick="playAudio('135')">Tu préfères quoi ?</span> / <span onclick="playAudio('136')">Qu'est-ce que tu aimes ?</span>
+5. <span onclick="playAudio('137')">Je ne sais pas... Ça dépend.</span> / <span onclick="playAudio('138')">J'aime les deux.</span> / <span onclick="playAudio('139')">Je les aime tous.</span> / <span onclick="playAudio('140')">J’aime ceux-là.</span>
 </details>
 
 ---
@@ -373,65 +373,135 @@ Consigne : Que dites-vous dans ces situations ?
 
 #### A2 — Aimer + infinitif
 
-- <span onclick="playAudio('126')">J'aime voyager.</span>
-- <span onclick="playAudio('127')">Elle adore danser.</span>
-- <span onclick="playAudio('128')">Il déteste attendre.</span>
+- <span onclick="playAudio('141')">J'aime voyager.</span>
+- <span onclick="playAudio('142')">Elle adore danser.</span>
+- <span onclick="playAudio('143')">Il déteste attendre.</span>
 
 #### A2 — Aimer + article défini + nom
 
-- <span onclick="playAudio('129')">J'aime le chocolat.</span> _(en général)_
-- <span onclick="playAudio('130')">Tu aimes les films ?</span>
+- <span onclick="playAudio('144')">Il aime le pain.</span> _(en général)_
+- <span onclick="playAudio('145')">Tu aimes les films ?</span>
+- <span onclick="playAudio('146')">J’aime les pâtes.</span>
 
 #### A2 — Préférer... à...
 
-- <span onclick="playAudio('131')">Je préfère le thé au café.</span>
-- <span onclick="playAudio('132')">Elle préfère Paris à Lyon.</span>
+- <span onclick="playAudio('147')">Je préfère le thé au café.</span>
+- <span onclick="playAudio('148')">Elle préfère Paris à Lyon.</span>
 
 #### A2 — Plaire (+ pronom indirect)
 
-- <span onclick="playAudio('133')">Ça me plaît.</span> _(I like it)_
-- <span onclick="playAudio('134')">Ce film lui plaît.</span> _(He/She likes this movie)_
-- <span onclick="playAudio('135')">Ça ne me plaît pas.</span>
+- <span onclick="playAudio('149')">Ça me plaît.</span> _(I like it)_
+- <span onclick="playAudio('150')">Ce film lui plaît.</span> _(He/She likes this movie)_
+- <span onclick="playAudio('151')">Ça ne me plaît pas.</span>
 
 ---
 
 ### 8) Variante informelle (très courante)
 
-- <span onclick="playAudio('136')">J'adore !</span>
-- <span onclick="playAudio('137')">C'est trop bien !</span>
-- <span onclick="playAudio('138')">C'est pas mon truc.</span>
-- <span onclick="playAudio('139')">Bof.</span>
-- <span onclick="playAudio('140')">J'aime trop ça !</span> _(= j'adore)_
-- <span onclick="playAudio('141')">C'est nul.</span> _(= c'est mauvais)_
-- <span onclick="playAudio('142')">Je kiffe.</span> _(argot = j'adore)_
+- <span onclick="playAudio('152')">J'adore !</span>
+- <span onclick="playAudio('153')">C'est trop bien !</span>
+- <span onclick="playAudio('154')">C'est pas mon truc.</span>
+- <span onclick="playAudio('155')">Bof.</span>
+- <span onclick="playAudio('156')">J'aime trop ça !</span> _(= j'adore)_
+- <span onclick="playAudio('157')">C'est nul.</span> _(= c'est mauvais)_
+- <span onclick="playAudio('158')">Je kiffe.</span> _(argot = j'adore)_
+- <span onclick="playAudio('159')">J’<b>ai envie de</b> m’amuser.</span> -(I feel like having fun.)
 
 ---
 
 ### 9) Expressions idiomatiques – goûts
 
-| Expression                                                           | Signification                          | English                |
-| -------------------------------------------------------------------- | -------------------------------------- | ---------------------- |
-| <span onclick="playAudio('143')">C'est mon truc</span>               | J'aime ça                              | It's my thing          |
-| <span onclick="playAudio('144')">Ce n'est pas ma tasse de thé</span> | Je n'aime pas trop                     | It's not my cup of tea |
-| <span onclick="playAudio('145')">Chacun ses goûts</span>             | Les gens aiment des choses différentes | To each their own      |
-| <span onclick="playAudio('146')">Avoir le coup de foudre</span>      | Aimer immédiatement                    | Love at first sight    |
-| <span onclick="playAudio('147')">Ne pas être emballé</span>          | Ne pas être enthousiaste               | To not be thrilled     |
-| <span onclick="playAudio('148')">Ça me dit</span>                    | Ça me tente / j'ai envie               | I'm up for it          |
-| <span onclick="playAudio('149')">Ça ne me dit rien</span>            | Je n'ai pas envie                      | I'm not interested     |
+| Expression                                                        | Signification                          | English                |
+| ----------------------------------------------------------------- | -------------------------------------- | ---------------------- |
+| <span onclick="playAudio('160')">C'est mon truc</span>            | J'aime ça                              | It's my thing          |
+| <span onclick="playAudio('161')">C'est pas ma tasse de thé</span> | Je n'aime pas trop                     | It's not my cup of tea |
+| <span onclick="playAudio('162')">Chacun ses goûts</span>          | Les gens aiment des choses différentes | To each their own      |
+| <span onclick="playAudio('163')">Avoir le coup de foudre</span>   | Aimer immédiatement                    | Love at first sight    |
+| <span onclick="playAudio('164')">Ne pas être emballé</span>       | Ne pas être enthousiaste               | To not be thrilled     |
+| <span onclick="playAudio('165')">Ça me dit</span>                 | Ça me tente / j'ai envie               | I'm up for it          |
+| <span onclick="playAudio('166')">Ça ne me dit rien</span>         | Je n'ai pas envie                      | I'm not interested     |
 
 ---
 
 ### 10) Phrases ultra utiles – à copier
 
-- <span onclick="playAudio('150')">J'aime beaucoup…</span>
-- <span onclick="playAudio('151')">Je n'aime pas trop…</span>
-- <span onclick="playAudio('152')">C'est mon/ma… préféré(e).</span>
-- <span onclick="playAudio('153')">Je préfère… à…</span>
-- <span onclick="playAudio('154')">Qu'est-ce que tu aimes ?</span>
-- <span onclick="playAudio('155')">Tu préfères quoi ?</span>
-- <span onclick="playAudio('156')">Ça me plaît.</span>
-- <span onclick="playAudio('157')">Ça ne me plaît pas.</span>
-- <span onclick="playAudio('158')">Je suis fan de…</span>
-- <span onclick="playAudio('159')">Je ne supporte pas…</span>
-- <span onclick="playAudio('160')">C'est délicieux !</span>
-- <span onclick="playAudio('161')">C'est dégoûtant !</span>
+- <span onclick="playAudio('167')">J'aime beaucoup…</span>
+- <span onclick="playAudio('168')">Je n'aime pas trop…</span>
+- <span onclick="playAudio('169')">C'est mon/ma… préféré(e).</span>
+- <span onclick="playAudio('170')">Je préfère… à…</span>
+- <span onclick="playAudio('171')">Qu'est-ce que tu aimes ?</span>
+- <span onclick="playAudio('172')">Tu préfères quoi ?</span>
+- <span onclick="playAudio('173')">Ça me plaît.</span>
+- <span onclick="playAudio('174')">Ça ne me plaît pas.</span>
+- <span onclick="playAudio('175')">Je suis fan de…</span>
+- <span onclick="playAudio('176')">Je ne supporte pas…</span>
+- <span onclick="playAudio('177')">C'est délicieux !</span>
+- <span onclick="playAudio('178')">C'est dégoûtant !</span>
+
+### 11) 50 expressions françaises les plus courantes
+
+#### Exprimer ce qu'on aime, ce qu'on adore et ce qu'on apprécie
+
+1. <span onclick="playAudio('179')">J'aime bien.</span> – I like it.
+2. <span onclick="playAudio('180')">J'adore.</span> – I love it / I adore it.
+3. <span onclick="playAudio('181')">Je t'aime.</span> – I love you.
+4. <span onclick="playAudio('182')">Ça me plaît.</span> – I like it / It pleases me.
+5. <span onclick="playAudio('183')">Tu me plais.</span> – I like you / You appeal to me.
+6. <span onclick="playAudio('184')">Je suis fan.</span> – I am a fan / I really like it.
+7. <span onclick="playAudio('185')">Ça fait du bien.</span> – It feels good / I enjoy it.
+8. <span onclick="playAudio('186')">C'est (vraiment) mon truc.</span> – It's (really) my thing.
+9. <span onclick="playAudio('187')">Je kiffe / Je te kiffe.</span> – I like it / I like you (Very common slang).
+10. <span onclick="playAudio('188')">Je surkiffe.</span> – I really love it (Stronger slang).
+11. <span onclick="playAudio('189')">Je suis dingue de toi.</span> – I am crazy about you.
+
+#### Décrire ce qu'on aime (éloge positif)
+
+11. <span onclick="playAudio('190')">C'est bon.</span> – It's good.
+12. <span onclick="playAudio('191')">C'est super.</span> – It's super / great.
+13. <span onclick="playAudio('192')">C'est génial.</span> – It's great / brilliant.
+14. <span onclick="playAudio('193')">C'est magnifique.</span> – It's magnificent / beautiful.
+15. <span onclick="playAudio('194')">C'est beau.</span> – It's beautiful.
+16. <span onclick="playAudio('195')">C'est cool.</span> – It's cool.
+17. <span onclick="playAudio('196')">C'est top.</span> – It's great.
+18. <span onclick="playAudio('197')">C'est parfait.</span> – It's perfect.
+19. <span onclick="playAudio('198')">C'est incroyable.</span> – It's incredible.
+20. <span onclick="playAudio('199')">C'est délicieux.</span> – It's delicious (used for food).
+21. <span onclick="playAudio('200')">C'est une merveille.</span> – It's a marvel / It's wonderful.
+22. <span onclick="playAudio('201')">C'est merveilleux.</span> – It's wonderful.
+23. <span onclick="playAudio('202')">C'est fou. / C'est dingue.</span> – It's crazy / awesome (Slang).
+24. <span onclick="playAudio('203')">Tu déchires / Ça déchire.</span> – You rock / It rocks (Slang).
+25. <span onclick="playAudio('204')">C'est chanmé.</span> – It's awesome (Verlan slang for méchant).
+
+#### Exprimer ce qu'on n'aime pas et l'indifférence
+
+26. <span onclick="playAudio('205')">J'aime pas. / J'aime pas être en retard. </span> – I don't like. / I don't like to be late.
+27. <span onclick="playAudio('206')">Je déteste.</span> – I hate.
+28. <span onclick="playAudio('207')">Je hais.</span> – I hate (Stronger).
+29. <span onclick="playAudio('208')">C'est pas mon truc.</span> – It's not my thing.
+30. <span onclick="playAudio('209')">Ça me dérange.</span> – It bothers me.
+31. <span onclick="playAudio('210')">Tu me dégoûtes.</span> – You disgust me.
+32. <span onclick="playAudio('211')">Je m'en fous.</span> – I don't care / I don't give a damn.
+33. <span onclick="playAudio('212')">Je m'en bats les couilles.</span> – I don't give a f\*ck (Highly vulgar).
+
+#### Exprimer l'agacement et la frustration
+
+34. <span onclick="playAudio('213')">C'est chiant.</span> – It's annoying / boring.
+35. <span onclick="playAudio('214')">Ça m'énerve.</span> – It annoys me.
+36. <span onclick="playAudio('215')">Ça me soûle.</span> – It annoys me / I'm fed up (literally: it gets me drunk).
+37. <span onclick="playAudio('216')">J'en ai marre.</span> – I'm sick of it / I've had enough.
+38. <span onclick="playAudio('217')">Ça me fait chier.</span> – It pisses me off (Vulgar).
+39. <span onclick="playAudio('218')">C'est pas possible.</span> – It's not possible / I can't stand it.
+40. <span onclick="playAudio('219')">C'est l'enfer.</span> – It's hell / It's unbearable.
+
+#### Décrire ce qu'on n'aime pas (critique négative)
+
+41. <span onclick="playAudio('220')">C'est nul.</span> – It sucks / It's rubbish.
+42. <span onclick="playAudio('221')">C'est pas terrible.</span> – It's not great.
+43. <span onclick="playAudio('222')">C'est moche.</span> – It's ugly.
+44. <span onclick="playAudio('223')">C'est dégueulasse / C'est dégueu.</span> – It's disgusting.
+45. <span onclick="playAudio('224')">C'est immonde.</span> – It's hideous / atrocious.
+46. <span onclick="playAudio('225')">C'est de la merde.</span> – It's shit / crap (Vulgar).
+47. <span onclick="playAudio('226')">C'est pourri.</span> – It's rotten / awful.
+48. <span onclick="playAudio('227')">C'est naze.</span> – It's lame / pathetic.
+49. <span onclick="playAudio('228')">C'est une cata(strophe).</span> – It's a disaster.
+50. <span onclick="playAudio('229')">Ça craint.</span> – It sucks / It's sketchy.
