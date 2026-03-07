@@ -408,6 +408,12 @@
             level: 1,
             url: "fr/grammar/tense/index.html",
           },
+          {
+            id: "Verb",
+            group: 3,
+            level: 1,
+            url: "fr/grammar/verb/index.html",
+          },
 
           // Grammar grandchildren
           {
@@ -433,6 +439,30 @@
             group: 3,
             level: 2,
             url: "fr/grammar/noun/kitchen.html",
+          },
+          {
+            id: "housechores",
+            group: 3,
+            level: 2,
+            url: "fr/grammar/verb/index.html",
+          },
+          {
+            id: "routine",
+            group: 3,
+            level: 2,
+            url: "fr/grammar/verb/routine.html",
+          },
+          {
+            id: "daily",
+            group: 3,
+            level: 2,
+            url: "fr/grammar/verb/daily.html",
+          },
+          {
+            id: "garden",
+            group: 3,
+            level: 2,
+            url: "fr/grammar/verb/garden.html",
           },
           {
             id: "present",
@@ -881,6 +911,12 @@
             level: 2,
             url: "fr/everyday/voyage.html",
           },
+          {
+            id: "Famille",
+            group: 7,
+            level: 2,
+            url: "fr/everyday/famille.html",
+          },
 
           // Everyday grandchildren (Time/Weather)
           {
@@ -936,6 +972,7 @@
           // Grammar connections
           { source: "Grammar", target: "Noun" },
           { source: "Grammar", target: "Tense" },
+          { source: "Grammar", target: "Verb" },
           { source: "Noun", target: "body" },
           { source: "Noun", target: "house" },
           { source: "Noun", target: "landforms" },
@@ -946,6 +983,10 @@
           { source: "Tense", target: "imperfect" },
           { source: "Tense", target: "conditional" },
           { source: "Tense", target: "subjonctif" },
+          { source: "Verb", target: "housechores" },
+          { source: "Verb", target: "routine" },
+          { source: "Verb", target: "daily" },
+          { source: "Verb", target: "garden" },
 
           // Steps connections
           { source: "Steps", target: "Cloze Test" },
@@ -1032,6 +1073,7 @@
           { source: "Lifestyle", target: "Aimer" },
           { source: "Lifestyle", target: "Personnelles" },
           { source: "Lifestyle", target: "Voyage" },
+          { source: "Lifestyle", target: "Famille" },
           // Time/Weather
           { source: "Time/Weather", target: "Temps" },
           { source: "Time/Weather", target: "Meteo" },
@@ -1145,7 +1187,8 @@
       // Color scale
       const baseColor = d3.scaleOrdinal(d3.schemeCategory10);
       const color = (group) => {
-        if (group === 7) return "#06E7ED"; // Custom color for Everyday (Group 7)
+        if (group === 7) return "#06E7ED";
+        if (group === 8) return "#edb706"; // Custom color for Everyday (Group 7)
         return baseColor(group);
       };
 
