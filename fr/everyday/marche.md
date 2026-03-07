@@ -110,6 +110,76 @@
 | <span onclick="playAudio('c_est de la région')">c'est de la région ?</span> | /sɛ də la ʁe.ʒjɔ̃/ | is it from the region? |
 | <span onclick="playAudio('ça se conserve combien de temps')">ça se conserve combien de temps ?</span> | /sa sə kɔ̃.sɛʁv kɔ̃.bjɛ̃ də tɑ̃/ | how long does it keep? |
 
+#### 🆕 <span onclick="playAudio('Quantités & emballages (ajouts)')">Quantités & emballages (ajouts)</span>
+| Français | IPA | English |
+|--------|-----|---------|
+| <span onclick="playAudio('un kilo')">un kilo</span> | /ɛ̃ ki.lo/ | a kilo |
+| <span onclick="playAudio('un demi-kilo')">un demi-kilo</span> | /ɛ̃ də.mi ki.lo/ | half a kilo |
+| <span onclick="playAudio('deux cents grammes')">deux cents grammes</span> | /dø sɑ̃ ɡʁam/ | 200 grams |
+| <span onclick="playAudio('une botte de persil')">une botte de persil</span> | /yn bɔt də pɛʁ.si/ | a bunch of parsley |
+| <span onclick="playAudio('une barquette de fraises')">une barquette de fraises</span> | /yn baʁ.kɛt də fʁɛz/ | a punnet of strawberries |
+| <span onclick="playAudio('un filet de pommes de terre')">un filet de pommes de terre</span> | /ɛ̃ fi.lɛ də pɔm də tɛʁ/ | a net bag of potatoes |
+| <span onclick="playAudio('un morceau de fromage')">un morceau de fromage</span> | /ɛ̃ mɔʁ.so də fʁɔ.maz/ | a piece of cheese |
+| <span onclick="playAudio('une tranche')">une tranche</span> | /yn tʁɑ̃ʃ/ | a slice |
+| <span onclick="playAudio('une pièce')">une pièce</span> | /yn pjɛs/ | a piece/item (e.g., a piece of fruit) |
+| <span onclick="playAudio('Je vous en mets combien')">Je vous en mets combien ?</span> | /ʒə vu zɑ̃ mɛ kɔ̃.bjɛ̃/ | How much shall I give you? |
+| <span onclick="playAudio('Ça fait combien au total')">Ça fait combien au total ?</span> | /sa fɛ kɔ̃.bjɛ̃ o tɔ.tal/ | How much is it total? |
+| <span onclick="playAudio('Ça fait…')">Ça fait…</span> | /sa fɛ/ | That comes to… |
+
+#### 🆕 <span onclick="playAudio('Fraîcheur & maturité (ajouts)')">Fraîcheur & maturité (ajouts)</span>
+| Français | IPA | English |
+|--------|-----|---------|
+| <span onclick="playAudio('Ils sont mûrs')">Ils sont mûrs ?</span> | /il sɔ̃ myʁ/ | Are they ripe? |
+| <span onclick="playAudio('C’est bien mûr')">C’est bien mûr ?</span> | /sɛ bjɛ̃ myʁ/ | Is it nicely ripe? |
+| <span onclick="playAudio('C’est pour aujourd’hui ou pour demain')">C’est pour aujourd’hui ou pour demain ?</span> | /sɛ puʁ o.ʒuʁ.dɥi u puʁ də.mɛ̃/ | Is it for today or for tomorrow? |
+| <span onclick="playAudio('Je les prends pour une salade')">Je les prends pour une salade.</span> | /ʒə le pʁɑ̃ puʁ yn sa.lad/ | I’m taking them for a salad. |
+| <span onclick="playAudio('Je les prends pour une soupe')">Je les prends pour une soupe.</span> | /ʒə le pʁɑ̃ puʁ yn sup/ | I’m taking them for a soup. |
+| <span onclick="playAudio('Vous me choisissez des beaux')">Vous me choisissez des beaux ?</span> | /vu mə ʃwa.zi.se de bo/ | Will you pick me some nice ones? |
+
+#### 🆕 <span onclick="playAudio('Origine & saison (ajouts)')">Origine & saison (ajouts)</span>
+| Français | IPA | English |
+|--------|-----|---------|
+| <span onclick="playAudio('Ça vient d’où')">Ça vient d’où ?</span> | /sa vjɛ̃ du/ | Where is it from? |
+| <span onclick="playAudio('C’est de la région')">C’est de la région ?</span> | /sɛ də la ʁe.ʒjɔ̃/ | Is it from the region? |
+| <span onclick="playAudio('C’est de saison en ce moment')">C’est de saison en ce moment ?</span> | /sɛ də sɛ.zɔ̃ ɑ̃ sə mɔ.mɑ̃/ | Is it in season right now? |
+| <span onclick="playAudio('Vous avez quelque chose de bien sucré')">Vous avez quelque chose de bien sucré ?</span> | /vu za.ve kɛlkə ʃoz də bjɛ̃ sy.kʁe/ | Do you have something really sweet? |
+| <span onclick="playAudio('pas trop acide')">…pas trop acide ?</span> | /pa tʁo a.sid/ | …not too sour? |
+
+#### 🆕 <span onclick="playAudio('Paiement (ajouts)')">Paiement (ajouts)</span>
+| Français | IPA | English |
+|--------|-----|---------|
+| <span onclick="playAudio('Vous prenez la carte à partir de combien')">Vous prenez la carte à partir de combien ?</span> | /vu pʁə.ne la kaʁt a paʁ.tiʁ də kɔ̃.bjɛ̃/ | What is the minimum to pay by card? |
+| <span onclick="playAudio('Je n’ai pas de monnaie.')">Je n’ai pas de monnaie.</span> | /ʒə n‿e pa də mɔ.nɛ/ | I don’t have change. |
+| <span onclick="playAudio('Vous pouvez faire l’appoint')">Vous pouvez faire l’appoint ?</span> | /vu pu.ve fɛʁ la.pwɛ̃/ | Can you give the exact amount? |
+| <span onclick="playAudio('Je peux payer en sans contact')">Je peux payer en sans contact ?</span> | /ʒə pø pɛ.je ɑ̃ sɑ̃ kɔ̃.takt/ | Can I pay contactless? |
+
+#### 🆕 <span onclick="playAudio('Préparation & découpe (ajouts)')">Préparation & découpe (ajouts)</span>
+| Français | IPA | English |
+|--------|-----|---------|
+| <span onclick="playAudio('Vous pouvez couper')">Vous pouvez couper ?</span> | /vu pu.ve ku.pe/ | Can you cut it? |
+| <span onclick="playAudio('Vous pouvez trancher')">Vous pouvez trancher ?</span> | /vu pu.ve tʁɑ̃.ʃe/ | Can you slice it? |
+| <span onclick="playAudio('En tranches, s’il vous plaît')">En tranches, s’il vous plaît.</span> | /ɑ̃ tʁɑ̃ʃ sil vu plɛ/ | In slices, please. |
+| <span onclick="playAudio('En morceaux, s’il vous plaît')">En morceaux, s’il vous plaît.</span> | /ɑ̃ mɔʁ.so sil vu plɛ/ | In pieces, please. |
+| <span onclick="playAudio('Haché, s’il vous plaît')">Haché, s’il vous plaît.</span> | /a.ʃe sil vu plɛ/ | Minced, please. |
+| <span onclick="playAudio('Deux filets, s’il vous plaît')">Deux filets, s’il vous plaît.</span> | /dø fi.lɛ sil vu plɛ/ | Two fillets, please. |
+| <span onclick="playAudio('Un pavé, s’il vous plaît')">Un pavé, s’il vous plaît.</span> | /ɛ̃ pa.ve sil vu plɛ/ | A (thick) steak/cut, please. |
+| <span onclick="playAudio('Ça se conserve combien de temps')">Ça se conserve combien de temps ?</span> | /sa sə kɔ̃.sɛʁv kɔ̃.bjɛ̃ də tɑ̃/ | How long does it keep? |
+
+#### 🆕 <span onclick="playAudio('Mini cartes de grammaire (A2)')">Mini cartes de grammaire (A2)</span>
+
+**1) <span onclick="playAudio('Les partitifs')">Les partitifs (du / de la / de l’ / des)**</span>  
+- <span onclick="playAudio('Je voudrais du fromage, s’il vous plaît')">Je voudrais du fromage, s’il vous plaît.</span>  
+- <span onclick="playAudio('Je voudrais de la farine, s’il vous plaît')">Je voudrais de la farine, s’il vous plaît.</span>  
+- <span onclick="playAudio('Je voudrais de l’huile, s’il vous plaît')">Je voudrais de l’huile, s’il vous plaît.</span>  
+- <span onclick="playAudio('Je voudrais des tomates, s’il vous plaît')">Je voudrais des tomates, s’il vous plaît.</span>  
+
+**2) <span onclick="playAudio('Le pronom en')">Le pronom “en” (très utile au marché)**</span>  
+- <span onclick="playAudio('J’en prends un kilo')">J’en prends un kilo.</span>  
+- <span onclick="playAudio('J’en veux deux, s’il vous plaît')">J’en veux deux, s’il vous plaît.</span>  
+
+**3) <span onclick="playAudio('C_est versus')">“C’est” vs “Ils/Elles sont” (pour la nourriture)</span>**  
+- <span onclick="playAudio('C_est frais')">C'est frais" / Il est frais ?</span>  
+- <span onclick="playAudio('Elles sont fraîches')">Elles sont fraîches ?</span> (par exemple : les fraises / les tomates)
 #### ✨ <span onclick="playAudio('Adjectifs descriptifs')">Adjectifs descriptifs</span>
 | French | IPA | English |
 | :--- | :--- | :--- |
@@ -328,8 +398,34 @@ _Consigne : Complète le dialogue._
 > Cliente : Super. J'en prends \_\_\_.<br>
 > Vendeur : Ça marche.
 >
-> **Mots à utiliser**  
+> **Mots à utiliser**
 > frais · arrive · deux
+
+---
+
+### Cloze Dialogue 5 — Quantités (ultra courant)
+
+> Vendeur : Salut ! Je t’en mets **\_\_\_\_** ?  
+> Cliente : Un **\_\_\_\_**, s’il te plaît.  
+> Vendeur : OK. Autre chose ?  
+> Cliente : Oui, une **\_\_\_\_** de fraises.  
+> Vendeur : Voilà. Ça fait **\_\_\_\_** euros.
+>
+> **Mots à utiliser**
+> combien · demi-kilo · barquette · huit
+
+---
+
+### Cloze Dialogue 6 — Conservation (très utile)
+
+> Cliente : Salut. Ça se conserve combien de **\_\_\_\_** ?  
+> Vendeur : Environ deux ou trois **\_\_\_\_**.  
+> Cliente : D’accord. C’est pour aujourd’hui ou pour **\_\_\_\_** ?  
+> Vendeur : Plutôt pour aujourd’hui.  
+> Cliente : OK, j’en prends un **\_\_\_\_**.
+>
+> **Mots à utiliser**
+> temps · jours · demain · kilo
 
 > **Réponses**
 >
@@ -344,6 +440,12 @@ _Consigne : Complète le dialogue._
 >
 > <b>Dialogue 4</b><br>
 > frais / arrive / deux
+>
+> <b>Dialogue 5</b><br>
+> combien / demi-kilo / barquette / huit
+>
+> <b>Dialogue 6</b><br>
+> temps / jours / demain / kilo
 
 > ##### **Active Recall Exercises**
 >
@@ -362,7 +464,7 @@ _Consigne : Complète le dialogue._
 
 ##### Listening Exercises
 
-> <li><a href="marche-listen.html" target="_blank">Listening lab</a></li>
+> <ul><li><a href="marche-listen.html" target="_blank">Listening lab</a></li>
 > <li><a href="marche-listenMaster.html" target="_blank">Listening paragraph</a></li>
 > <li><a href="marche-error.html" target="_blank">Find the "imposter"</a></li>
 > <li><a href="marche-sequence.html" target="_blank">Audio sequencing</a></li></ul>

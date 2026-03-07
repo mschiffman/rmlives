@@ -157,13 +157,13 @@ document.getElementById("navbar").innerHTML = `
     <i class="bi bi-chevron-right toggle-icon"></i>
   </button>
   <div id="consonants" class="sidebar-submenu">
-    <a href="../r/index.html" class="sidebar-link">
+    <a href="${enunPrefix}r/index.html" class="sidebar-link">
       <i class="bi bi-headphones"></i> /ʀ/
     </a>
-    <a href="../ɲ/index.html" class="sidebar-link">
+    <a href="${enunPrefix}ɲ/index.html" class="sidebar-link">
       <i class="bi bi-headphones"></i> /ɲ/
     </a>
-    <a href="../ɥ/index.html" class="sidebar-link">
+    <a href="${enunPrefix}ɥ/index.html" class="sidebar-link">
       <i class="bi bi-headphones"></i> /ɥ/
     </a>
   </div>

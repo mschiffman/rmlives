@@ -360,8 +360,8 @@ Consigne : Que dites-vous dans ces situations ?
 
 <details><summary>**Réponses possibles**</summary>
 
-1. <span onclick="playAudio('129')">Oui, j'aime bien le café.</span> / <span onclick="playAudio('130')">Non, je préfère le thé.</span>
-2. <span onclick="playAudio('131')">C'est délicieux ! J'adore !</span> / <span onclick="playAudio('132')">C'est mon plat préféré.</span>
+1. <span onclick="playAudio('129')">Oui, j'aime bien le café.</span> / <span onclick="playAudio('130')">Non, je préfère le thé.</span> / <span onclick="playAudio('130a')">Je ne bois pas de café. J'évite la caféine.</span>
+2. <span onclick="playAudio('131')">C'est délicieux ! J'adore !</span> / <span onclick="playAudio('132')">C'est mon plat préféré.</span> / <span onclick="playAudio('132a')">C’est un de mes restos préférés.</span>
 3. <span onclick="playAudio('133')">Merci, mais ce n'est pas mon truc.</span> / <span onclick="playAudio('134')">Non merci, je n'aime pas vraiment ça.</span>
 4. <span onclick="playAudio('135')">Tu préfères quoi ?</span> / <span onclick="playAudio('136')">Qu'est-ce que tu aimes ?</span>
 5. <span onclick="playAudio('137')">Je ne sais pas... Ça dépend.</span> / <span onclick="playAudio('138')">J'aime les deux.</span> / <span onclick="playAudio('139')">Je les aime tous.</span> / <span onclick="playAudio('140')">J’aime ceux-là.</span>
