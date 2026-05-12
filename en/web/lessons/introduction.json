@@ -1,0 +1,22 @@
+{
+  "id": "introduction",
+  "title": "Introducing Yourself",
+  "type": "qa",
+  "explanation": {
+    "title": "Key Idea",
+    "text": "A good self-introduction includes your name, where you're from, what you do, your age, and where you live. Use contractions like \"I'm\" and \"What's\" to sound more natural."
+  },
+  "sourceLabel": "Question",
+  "targetLabel": "Answer",
+  "vocab": [
+    { "id": 1, "topic": "name", "source": "What's your name?", "target": "My name is..." },
+    { "id": 2, "topic": "father", "source": "What's your father's name?", "target": "My father's name is..." },
+    { "id": 3, "topic": "mother", "source": "What's your mother's name?", "target": "My mother's name is..." },
+    { "id": 4, "topic": "origin", "source": "Where are you from?", "target": "I'm from..." },
+    { "id": 5, "topic": "occupation", "source": "What do you do?", "target": "I'm a... / I work in..." },
+    { "id": 6, "topic": "age", "source": "How old are you?", "target": "I'm ... years old." },
+    { "id": 7, "topic": "dob", "source": "What's your date of birth?", "target": "My date of birth is..." },
+    { "id": 8, "topic": "marital", "source": "Are you married?", "target": "Yes, I am. / No, I'm single." },
+    { "id": 9, "topic": "residence", "source": "Where do you live?", "target": "I live in..." }
+  ]
+}

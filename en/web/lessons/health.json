@@ -1,0 +1,15 @@
+{
+  "id": "health",
+  "title": "Common Health Problems",
+  "type": "vocab",
+  "vocab": [
+    { "id": 1, "en": "Sore throat", "my": "လည်ချောင်းနာခြင်း", "zh": "喉咙痛", "fr": "le mal de gorge", "es": "el dolor de garganta" },
+    { "id": 2, "en": "Cough", "my": "ချောင်းဆိုးခြင်း", "zh": "咳嗽", "fr": "la toux", "es": "la tos" },
+    { "id": 3, "en": "Runny nose", "my": "နှာရည်ယိုခြင်း", "zh": "流鼻涕", "fr": "le nez qui coule", "es": "la secreción nasal" },
+    { "id": 4, "en": "Headache", "my": "ခေါင်းကိုက်ခြင်း", "zh": "头痛", "fr": "le mal de tête", "es": "el dolor de cabeza" },
+    { "id": 5, "en": "The flu", "my": "တုပ်ကွေးဖျားနာခြင်း", "zh": "流感", "fr": "la grippe", "es": "la gripe" },
+    { "id": 6, "en": "Pink eye", "my": "မျက်စိနာခြင်း", "zh": "红眼病", "fr": "la conjonctivite", "es": "la conjuntivitis" },
+    { "id": 7, "en": "Diarrhea", "my": "ဝမ်းလျှောခြင်း", "zh": "腹泻", "fr": "la diarrhée", "es": "la diarrea" },
+    { "id": 8, "en": "Indigestion", "my": "အစာမကျေဖြစ်ခြင်း", "zh": "消化不良", "fr": "l'indigestion", "es": "la indigestión" }
+  ]
+}

@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clear Everyday English - Multi-Language Picture Matching</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CHXHM9CZKM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-CHXHM9CZKM");
+    </script>
+
+    <!-- Favicons -->
+    <link href="/img/favicon.png" rel="icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f0f2f5;
+        padding: 20px 0;
+      }
+      .header-section {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .nav-menu {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .language-selector {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .language-selector label {
+        font-weight: 600;
+        margin-right: 10px;
+        color: #495057;
+      }
+      .language-selector select {
+        padding: 8px 20px;
+        font-size: 16px;
+        border-radius: 20px;
+        border: 2px solid #dee2e6;
+        background: white;
+        cursor: pointer;
+        min-width: 200px;
+      }
+      .nav-btn {
+        padding: 12px 24px;
+        margin: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 25px;
+        background: #fff;
+        color: #333;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+      .nav-btn.active {
+        background: #3498db;
+        color: white;
+      }
+      .nav-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+      .watch-btn {
+        padding: 15px 30px;
+        font-size: 18px;
+        background: #ff0000;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 20px 0;
+        font-weight: bold;
+        box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3);
+        transition: 0.3s;
+      }
+      .watch-btn:hover {
+        background: #cc0000;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+      }
+      .content-area {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+      .score-display {
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 20px 0;
+      }
+      .column-header {
+        text-align: center;
+        font-weight: 600;
+        color: #495057;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #e9ecef;
+        border-radius: 5px;
+      }
+      .game-card {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .word-card {
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+      .picture-card .card-body {
+        padding: 15px;
+        text-align: center;
+      }
+      .picture-emoji {
+        font-size: 4rem;
+        display: block;
+      }
+      .game-card:hover:not(.matched) {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .game-card.selected {
+        border: 3px solid #0d6efd !important;
+        box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+      }
+      .game-card.matched {
+        background-color: #d1e7dd !important;
+        border: 2px solid #198754 !important;
+        pointer-events: none;
+      }
+      .game-card.incorrect {
+        animation: shake 0.3s ease;
+        border: 3px solid #dc3545 !important;
+      }
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-10px);
+        }
+        75% {
+          transform: translateX(10px);
+        }
+      }
+      .matched-check {
+        color: #198754;
+        font-size: 1.5rem;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-section">
+        <h1>Clear Everyday English Learning Hub</h1>
+        <p class="lead">Multi-Language Picture Matching</p>
+      </div>
+
+      <div class="language-selector">
+        <label for="languageSelect">Choose your language:</label>
+        <select
+          id="languageSelect"
+          class="form-select-lg"
+          onchange="changeLanguage()"
+        >
+          <option value="my">မြန်မာ (Burmese)</option>
+          <option value="zh">中文 (Chinese)</option>
+          <option value="en">English</option>
+          <option value="fr">Français (French)</option>
+          <option value="es">Español (Spanish)</option>
+        </select>
+      </div>
+
+      <div class="nav-menu">
+        <button class="nav-btn active" onclick="loadLesson('animals')">
+          Animals
+        </button>
+        <button class="nav-btn" onclick="loadLesson('food')">
+          Food & Drinks
+        </button>
+        <button class="nav-btn" onclick="loadLesson('weather')">Weather</button>
+      </div>
+
+      <div class="content-area">
+        <h2 id="lesson-title" class="text-center mb-3">Animals</h2>
+
+        <p class="text-center text-muted">
+          Watch the video, then match the words with pictures!
+        </p>
+        <div class="text-center">
+          <button class="watch-btn" onclick="openVideo()">
+            ▶ Watch Video on YouTube
+          </button>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="score-display">
+          <span class="badge bg-primary"
+            >Matches: <span id="matchCount">0</span> /
+            <span id="totalPairs">6</span></span
+          >
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="column-header" id="wordLanguageHeader">Words</div>
+            <div id="sourceColumn"></div>
+          </div>
+          <div class="col-md-6">
+            <div class="column-header">Pictures</div>
+            <div id="targetColumn"></div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <button class="btn btn-success btn-lg" onclick="initGame()">
+            🔄 New Game
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const languageNames = {
+        my: "မြန်မာ (Burmese)",
+        zh: "中文 (Chinese)",
+        en: "English",
+        fr: "Français (French)",
+        es: "Español (Spanish)",
+      };
+
+      const lessons = {
+        animals: {
+          title: "Animals",
+          videoID: "YOUR_ANIMALS_VIDEO_ID", // Replace with actual video ID
+          vocab: [
+            {
+              id: 1,
+              en: "Cat",
+              my: "ကြောင်",
+              zh: "猫",
+              fr: "Chat",
+              es: "Gato",
+              emoji: "🐱",
+            },
+            {
+              id: 2,
+              en: "Dog",
+              my: "ခွေး",
+              zh: "狗",
+              fr: "Chien",
+              es: "Perro",
+              emoji: "🐶",
+            },
+            {
+              id: 3,
+              en: "Bird",
+              my: "ငှက်",
+              zh: "鸟",
+              fr: "Oiseau",
+              es: "Pájaro",
+              emoji: "🐦",
+            },
+            {
+              id: 4,
+              en: "Fish",
+              my: "ငါး",
+              zh: "鱼",
+              fr: "Poisson",
+              es: "Pez",
+              emoji: "🐠",
+            },
+            {
+              id: 5,
+              en: "Elephant",
+              my: "ဆင်",
+              zh: "大象",
+              fr: "Éléphant",
+              es: "Elefante",
+              emoji: "🐘",
+            },
+            {
+              id: 6,
+              en: "Lion",
+              my: "ခြင်္သေ့",
+              zh: "狮子",
+              fr: "Lion",
+              es: "León",
+              emoji: "🦁",
+            },
+          ],
+        },
+        food: {
+          title: "Food & Drinks",
+          videoID: "YOUR_FOOD_VIDEO_ID",
+          vocab: [
+            {
+              id: 1,
+              en: "Apple",
+              my: "ပန်းသီး",
+              zh: "苹果",
+              fr: "Pomme",
+              es: "Manzana",
+              emoji: "🍎",
+            },
+            {
+              id: 2,
+              en: "Banana",
+              my: "ငှက်ပျောသီး",
+              zh: "香蕉",
+              fr: "Banane",
+              es: "Plátano",
+              emoji: "🍌",
+            },
+            {
+              id: 3,
+              en: "Pizza",
+              my: "ပီဇာ",
+              zh: "披萨",
+              fr: "Pizza",
+              es: "Pizza",
+              emoji: "🍕",
+            },
+            {
+              id: 4,
+              en: "Hamburger",
+              my: "ဟမ်ဘာဂါ",
+              zh: "汉堡包",
+              fr: "Hamburger",
+              es: "Hamburguesa",
+              emoji: "🍔",
+            },
+            {
+              id: 5,
+              en: "Coffee",
+              my: "ကော်ဖီ",
+              zh: "咖啡",
+              fr: "Café",
+              es: "Café",
+              emoji: "☕",
+            },
+            {
+              id: 6,
+              en: "Ice Cream",
+              my: "ရေခဲမုန့်",
+              zh: "冰淇淋",
+              fr: "Glace",
+              es: "Helado",
+              emoji: "🍦",
+            },
+          ],
+        },
+        weather: {
+          title: "Weather",
+          videoID: "YOUR_WEATHER_VIDEO_ID",
+          vocab: [
+            {
+              id: 1,
+              en: "Sunny",
+              my: "နေလင်းသော",
+              zh: "晴朗",
+              fr: "Ensoleillé",
+              es: "Soleado",
+              emoji: "☀️",
+            },
+            {
+              id: 2,
+              en: "Rainy",
+              my: "မိုးရွာသော",
+              zh: "下雨",
+              fr: "Pluvieux",
+              es: "Lluvioso",
+              emoji: "🌧️",
+            },
+            {
+              id: 3,
+              en: "Cloudy",
+              my: "တိမ်ထူသော",
+              zh: "多云",
+              fr: "Nuageux",
+              es: "Nublado",
+              emoji: "☁️",
+            },
+            {
+              id: 4,
+              en: "Snowy",
+              my: "နှင်းကျသော",
+              zh: "下雪",
+              fr: "Neigeux",
+              es: "Nevado",
+              emoji: "❄️",
+            },
+            {
+              id: 5,
+              en: "Windy",
+              my: "လေတိုက်သော",
+              zh: "多风",
+              fr: "Venteux",
+              es: "Ventoso",
+              emoji: "💨",
+            },
+            {
+              id: 6,
+              en: "Stormy",
+              my: "မုန်တိုင်းတိုက်သော",
+              zh: "暴风雨",
+              fr: "Orageux",
+              es: "Tormentoso",
+              emoji: "⛈️",
+            },
+          ],
+        },
+      };
+
+      const successSound = new Howl({
+        src: ["https://actions.google.com/sounds/v1/foley/beeps_and_boops.ogg"],
+      });
+
+      let currentLesson = null;
+      let currentLanguage = "my";
+      let selectedSource = null;
+      let selectedTarget = null;
+      let matchedPairs = new Set();
+      let matchCount = 0;
+
+      // Shuffle array
+      function shuffle(array) {
+        const newArray = [...array];
+        for (let i = newArray.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+      }
+
+      // Create word card
+      function createWordCard(word, pairId) {
+        const card = document.createElement("div");
+        card.className = "card game-card word-card";
+        card.dataset.pairId = pairId;
+        card.innerHTML = `<div class="card-body">${word}</div>`;
+
+        card.addEventListener("click", () => handleCardClick(card, true));
+
+        return card;
+      }
+
+      // Create picture card
+      function createPictureCard(emoji, pairId) {
+        const card = document.createElement("div");
+        card.className = "card game-card picture-card";
+        card.dataset.pairId = pairId;
+        card.innerHTML = `
+                <div class="card-body">
+                    <span class="picture-emoji">${emoji}</span>
+                </div>
+            `;
+
+        card.addEventListener("click", () => handleCardClick(card, false));
+
+        return card;
+      }
+
+      // Handle card click
+      function handleCardClick(card, isSource) {
+        if (matchedPairs.has(card.dataset.pairId)) return;
+
+        if (isSource) {
+          if (selectedSource) {
+            selectedSource.classList.remove("selected");
+          }
+          selectedSource = card;
+          card.classList.add("selected");
+        } else {
+          if (selectedTarget) {
+            selectedTarget.classList.remove("selected");
+          }
+          selectedTarget = card;
+          card.classList.add("selected");
+        }
+
+        if (selectedSource && selectedTarget) {
+          checkMatch();
+        }
+      }
+
+      // Check if selected cards match
+      function checkMatch() {
+        const sourceId = selectedSource.dataset.pairId;
+        const targetId = selectedTarget.dataset.pairId;
+
+        if (sourceId === targetId) {
+          // Correct match
+          successSound.play();
+          selectedSource.classList.remove("selected");
+          selectedTarget.classList.remove("selected");
+          selectedSource.classList.add("matched");
+          selectedTarget.classList.add("matched");
+
+          selectedSource.querySelector(".card-body").innerHTML +=
+            '<span class="matched-check">✓</span>';
+          selectedTarget.querySelector(".card-body").innerHTML +=
+            '<span class="matched-check">✓</span>';
+
+          matchedPairs.add(sourceId);
+          matchCount++;
+          document.getElementById("matchCount").textContent = matchCount;
+
+          if (matchCount === currentLesson.vocab.length) {
+            setTimeout(() => {
+              alert("🎉 Congratulations! You matched all pairs!");
+            }, 300);
+          }
+
+          selectedSource = null;
+          selectedTarget = null;
+        } else {
+          // Incorrect match
+          selectedSource.classList.add("incorrect");
+          selectedTarget.classList.add("incorrect");
+
+          setTimeout(() => {
+            selectedSource.classList.remove("selected", "incorrect");
+            selectedTarget.classList.remove("selected", "incorrect");
+            selectedSource = null;
+            selectedTarget = null;
+          }, 600);
+        }
+      }
+
+      // Initialize game
+      function initGame() {
+        const sourceColumn = document.getElementById("sourceColumn");
+        const targetColumn = document.getElementById("targetColumn");
+
+        sourceColumn.innerHTML = "";
+        targetColumn.innerHTML = "";
+
+        selectedSource = null;
+        selectedTarget = null;
+        matchedPairs.clear();
+        matchCount = 0;
+        document.getElementById("matchCount").textContent = "0";
+        document.getElementById("totalPairs").textContent =
+          currentLesson.vocab.length;
+
+        const shuffledTarget = shuffle(currentLesson.vocab);
+
+        // Update word language header
+        document.getElementById("wordLanguageHeader").textContent =
+          languageNames[currentLanguage];
+
+        currentLesson.vocab.forEach((pair) => {
+          const wordCard = createWordCard(pair[currentLanguage], pair.id);
+          sourceColumn.appendChild(wordCard);
+        });
+
+        shuffledTarget.forEach((pair) => {
+          const pictureCard = createPictureCard(pair.emoji, pair.id);
+          targetColumn.appendChild(pictureCard);
+        });
+      }
+
+      // Load lesson
+      function loadLesson(key) {
+        document
+          .querySelectorAll(".nav-btn")
+          .forEach((b) => b.classList.remove("active"));
+        event.target.classList.add("active");
+
+        currentLesson = lessons[key];
+        document.getElementById("lesson-title").textContent =
+          currentLesson.title;
+
+        initGame();
+      }
+
+      // Change language
+      function changeLanguage() {
+        currentLanguage = document.getElementById("languageSelect").value;
+        initGame();
+      }
+
+      // Open video
+      function openVideo() {
+        if (currentLesson.videoID.startsWith("YOUR_")) {
+          alert("Please add your YouTube video ID for this lesson!");
+          return;
+        }
+        window.open(
+          `https://www.youtube.com/watch?v=${currentLesson.videoID}`,
+          "_blank",
+        );
+      }
+
+      // Load initial lesson
+      currentLesson = lessons.animals;
+      initGame();
+    </script>
+  </body>
+</html>
