@@ -15,7 +15,8 @@
       "Bash(openssl passwd *)",
       "Bash(Rename-Item \"c:\\\\Users\\\\Owner\\\\Desktop\\\\MAIN\\\\WEBSITE\\\\My Website\\\\rmlives\\\\media\\\\RFI260504\\\\2\\\\1.mp3\" \"01.mp3\")",
       "Bash(gh repo *)",
-      "PowerShell(gh repo view mschiffm/rmlives 2>&1)"
+      "PowerShell(gh repo view mschiffm/rmlives 2>&1)",
+      "PowerShell($cred = Get-StoredCredential -Target \"git:https://github.com\" -ErrorAction SilentlyContinue; if \\($cred\\) { \"Found credential for: \" + $cred.UserName } else { \"Not found via Get-StoredCredential\" })"
     ],
     "additionalDirectories": [
       "\\tmp",
