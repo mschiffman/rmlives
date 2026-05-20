@@ -122,10 +122,64 @@
         overflow-y: auto;
       }
 
+      .panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
       .info-panel h3 {
-        margin: 0 0 10px 0;
+        margin: 0;
         color: #8b5cf6;
         font-size: 16px;
+      }
+
+      .language-select {
+        background: #333;
+        border: 1px solid #555;
+        color: #e0e0e0;
+        padding: 3px 6px;
+        border-radius: 4px;
+        font-size: 11px;
+        cursor: pointer;
+      }
+
+      .language-select:hover {
+        border-color: #8b5cf6;
+      }
+
+      .panel-close-btn {
+        background: none;
+        border: none;
+        color: #888;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 0 0 0 6px;
+        line-height: 1;
+      }
+
+      .panel-close-btn:hover {
+        color: #e0e0e0;
+      }
+
+      .panel-open-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(40, 40, 40, 0.9);
+        border: 1px solid #4a4a4a;
+        color: #8b5cf6;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        display: none;
+      }
+
+      .panel-open-btn:hover {
+        border-color: #8b5cf6;
+        color: #e0e0e0;
       }
 
       #legend {
@@ -272,8 +326,31 @@
     </style>
   </head>
   <body>
-    <div class="info-panel">
-      <h3>Nodes</h3>
+    <button class="panel-open-btn" id="panel-open-btn" title="Show Nodes panel">
+      Nodes &#9654;
+    </button>
+
+    <div class="info-panel" id="info-panel">
+      <div class="panel-header">
+        <h3>Nodes</h3>
+        <div style="display: flex; align-items: center; gap: 6px">
+          <select
+            id="language-select"
+            class="language-select"
+            title="Switch language"
+          >
+            <option value="sitemap.html">French</option>
+            <option value="japanese.html" selected>Japanese</option>
+          </select>
+          <button
+            class="panel-close-btn"
+            id="panel-close-btn"
+            title="Hide panel"
+          >
+            &#10005;
+          </button>
+        </div>
+      </div>
       <p>
         Click a cluster to show/hide related pages from the network. Click on a
         node to go to the web page.
@@ -604,6 +681,30 @@
         d.fx = null;
         d.fy = null;
       }
+
+      // Panel toggle
+      const infoPanel = document.getElementById("info-panel");
+      const closePanelBtn = document.getElementById("panel-close-btn");
+      const openPanelBtn = document.getElementById("panel-open-btn");
+
+      closePanelBtn.addEventListener("click", () => {
+        infoPanel.style.display = "none";
+        openPanelBtn.style.display = "block";
+      });
+
+      openPanelBtn.addEventListener("click", () => {
+        infoPanel.style.display = "block";
+        openPanelBtn.style.display = "none";
+      });
+
+      // Language switcher
+      document
+        .getElementById("language-select")
+        .addEventListener("change", (e) => {
+          if (e.target.value !== "japanese.html") {
+            window.location.href = e.target.value;
+          }
+        });
 
       // Handle window resize
       window.addEventListener("resize", () => {
